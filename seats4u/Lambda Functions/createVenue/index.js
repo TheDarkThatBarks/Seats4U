@@ -38,7 +38,8 @@ exports.handler = async (event) => {
                         return reject(error);
                     if (rows && rows.affectedRows == 1) {
                         // Somehow retrieve VenueID and return that
-                        return resolve(true);
+                        return resolve(rows[0].venueID);
+                        //return resolve(true);
                     } else {
                         return resolve(false);
                     }
@@ -46,7 +47,7 @@ exports.handler = async (event) => {
             });
         };
 
-        let insertResult = await createVenue(event.venueName,
+        let venueID = await createVenue(event.venueName,
                                              event.sideLeftRows,
                                              event.sideLeftColumns,
                                              event.centerRows,
@@ -56,7 +57,7 @@ exports.handler = async (event) => {
                                              event.password);
         response = {
             statusCode: 200,
-            success: insertResult
+            success: venueID
         };
     } else {
         response = {
