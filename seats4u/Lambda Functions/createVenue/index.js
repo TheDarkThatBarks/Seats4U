@@ -62,7 +62,7 @@ exports.handler = async (event) => {
     } else {
         response = {
             statusCode: 400,
-            success: false
+            error: "Venue with that name already exists"
         };
     }
 
