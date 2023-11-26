@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const db_access = require('/opt/nodejs/db_access')
+const db_access = require('/opt/nodejs/db_access');
 
 exports.handler = async (event) => {
 
@@ -11,26 +11,26 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
-    let DeleteConstant = (name) => {
+    // Change argument to VenueID
+    let deleteConstant = (venueID) => {
         return new Promise((resolve, reject) => {
-            pool.query("DELETE FROM Constants WHERE name=?", [name], (error, rows) => {
-                if (error) { return reject(error); }
-                if ((rows) && (rows.affectedRows == 1)) {
+            pool.query("DELETE FROM Venues WHERE VenueID=?", [venueID], (error, rows) => {
+                if (error)
+                    return reject(error);
+                if (rows && rows.affectedRows == 1) {
                     return resolve(true);
                 } else {
                     return resolve(false);
                 }
             });
         });
-    }
+    };
 
-    let response = undefined
+    let response = undefined;
     try {
-        const result = await DeleteConstant(event.name)
-
+        const result = await deleteConstant(event.name);
         response = {
             statusCode: 200,
-
             body: JSON.stringify(result)
         }
     } catch (err) {
@@ -39,7 +39,7 @@ exports.handler = async (event) => {
             error: err
         }
     } finally {
-        pool.end()   // disconnect from database to avoid "too many connections" problem that can occur
+        pool.end();   // disconnect from database to avoid "too many connections" problem that can occur
     }
 
     return response;
