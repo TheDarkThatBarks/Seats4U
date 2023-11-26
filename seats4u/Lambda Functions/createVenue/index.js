@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const db_access = require('/opt/nodejs/db_access')
+const db_access = require('/opt/nodejs/db_access');
 
 exports.handler = async (event) => {
 
