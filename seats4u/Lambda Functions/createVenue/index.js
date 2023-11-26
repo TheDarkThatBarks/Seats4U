@@ -11,7 +11,7 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
-    let validateExists = (name) => {
+    let alreadyExists = (name) => {
         return new Promise((resolve, reject) => {
             pool.query("SELECT * FROM Venues WHERE name=?", [name], (error, rows) => {
                 if (error)
@@ -27,9 +27,9 @@ exports.handler = async (event) => {
     };
 
     let response = undefined;
-    const canCreate = await validateExists(event.name);
+    const nameTaken = await alreadyExists(event.name);
 
-    if (!canCreate) {
+    if (!nameTaken) {
         let createVenue = (name, value) => {
             return new Promise((resolve, reject) => {
                 pool.query("INSERT into Venues(name,value) VALUES(?,?);", [name, value], (error, rows) => {
