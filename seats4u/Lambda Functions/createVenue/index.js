@@ -30,9 +30,10 @@ exports.handler = async (event) => {
     const nameTaken = await alreadyExists(event.name);
 
     if (!nameTaken) {
-        let createVenue = (name, value) => {
+        let createVenue = (name, sideLeftR, sideLeftC, centerR, centerC, sideRightR, sideRightC, password) => {
             return new Promise((resolve, reject) => {
-                pool.query("INSERT into Venues(name,value) VALUES(?,?);", [name, value], (error, rows) => {
+                pool.query("INSERT into Venues(name,sideLeftR,sideLeftC,centerR,centerC,sideRightR,sideRightC,password) VALUES(?,?,?,?,?,?,?,?);",
+                    [name, sideLeftR, sideLeftC, centerR, centerC, sideRightR, sideRightC, password], (error, rows) => {
                     if (error)
                         return reject(error);
                     if (rows && rows.affectedRows == 1) {
@@ -44,10 +45,17 @@ exports.handler = async (event) => {
             });
         };
 
-        let addResult = await createVenue(event.name, event.value);
+        let insertResult = await createVenue(event.venueName,
+                                             event.sideLeftRows,
+                                             event.sideLeftColumns,
+                                             event.centerRows,
+                                             event.centerColumns,
+                                             event.sideRightRows,
+                                             event.sideRightColumns,
+                                             event.password);
         response = {
             statusCode: 200,
-            success: addResult
+            success: insertResult
         };
     } else {
         response = {
