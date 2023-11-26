@@ -11,8 +11,6 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
-    
-
     let deleteConstant = (venueID) => {
         return new Promise((resolve, reject) => {
             pool.query("DELETE FROM Venues WHERE VenueID=?", [venueID], (error, rows) => {
