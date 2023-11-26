@@ -37,6 +37,7 @@ exports.handler = async (event) => {
                     if (error)
                         return reject(error);
                     if (rows && rows.affectedRows == 1) {
+                        // Somehow retrieve VenueID and return that
                         return resolve(true);
                     } else {
                         return resolve(false);
