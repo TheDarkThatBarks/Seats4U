@@ -48,13 +48,13 @@ exports.handler = async (event) => {
         };
 
         let venueID = await createVenue(event.venueName,
-                                             event.sideLeftRows,
-                                             event.sideLeftColumns,
-                                             event.centerRows,
-                                             event.centerColumns,
-                                             event.sideRightRows,
-                                             event.sideRightColumns,
-                                             event.password);
+                                        event.sideLeftRows,
+                                        event.sideLeftColumns,
+                                        event.centerRows,
+                                        event.centerColumns,
+                                        event.sideRightRows,
+                                        event.sideRightColumns,
+                                        event.password);
         response = {
             statusCode: 200,
             success: venueID
