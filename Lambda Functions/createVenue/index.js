@@ -57,7 +57,8 @@ exports.handler = async (event) => {
                                         event.password);
         response = {
             statusCode: 200,
-            success: venueID
+            venueID: venueID,
+            //token: token
         };
     } else {
         response = {
