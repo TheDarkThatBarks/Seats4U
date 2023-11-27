@@ -16,8 +16,7 @@ exports.handler = async (event) => {
             pool.query("SELECT * FROM Venues WHERE name=?", [name], (error, rows) => {
                 if (error)
                     return reject(error);
-                console.log(rows);
-                if (rows && rows.length == 1) {
+                if (rows && rows.length >= 1) {
                     return resolve(true);
                 } else {
                     return resolve(false);
@@ -27,7 +26,7 @@ exports.handler = async (event) => {
     };
 
     let response = undefined;
-    const nameTaken = await alreadyExists(event.name);
+    const nameTaken = await alreadyExists(event.venueName);
 
     if (!nameTaken) {
         let createVenue = (name, sideLeftR, sideLeftC, centerR, centerC, sideRightR, sideRightC, password) => {
@@ -38,7 +37,8 @@ exports.handler = async (event) => {
                         return reject(error);
                     if (rows && rows.affectedRows == 1) {
                         // Somehow retrieve VenueID and return that
-                        return resolve(rows[0].venueID);
+                        console.log(rows.insertId);
+                        return resolve(rows.insertId);
                         //return resolve(true);
                     } else {
                         return resolve(false);
