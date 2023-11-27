@@ -13,7 +13,7 @@ exports.handler = async (event) => {
 
     let deleteConstant = (venueID) => {
         return new Promise((resolve, reject) => {
-            pool.query("DELETE FROM Venues WHERE VenueID=?", [venueID], (error, rows) => {
+            pool.query("DELETE FROM Venues WHERE venueID=?", [venueID], (error, rows) => {
                 if (error)
                     return reject(error);
                 if (rows && rows.affectedRows == 1) {
