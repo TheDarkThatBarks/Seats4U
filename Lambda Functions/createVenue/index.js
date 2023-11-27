@@ -32,7 +32,7 @@ exports.handler = async (event) => {
     if (!nameTaken) {
         let createVenue = (name, sideLeftR, sideLeftC, centerR, centerC, sideRightR, sideRightC, password) => {
             return new Promise((resolve, reject) => {
-                pool.query("INSERT into Venues(name,sideLeftR,sideLeftC,centerR,centerC,sideRightR,sideRightC,password) VALUES(?,?,?,?,?,?,?,?);",
+                pool.query("INSERT into Venues(name,sideLeftRows,sideLeftColumns,centerRows,centerColumns,sideRightRows,sideRightColumns,password) VALUES(?,?,?,?,?,?,?,?);",
                     [name, sideLeftR, sideLeftC, centerR, centerC, sideRightR, sideRightC, password], (error, rows) => {
                     if (error)
                         return reject(error);
