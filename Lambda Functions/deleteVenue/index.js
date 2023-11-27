@@ -27,10 +27,10 @@ exports.handler = async (event) => {
 
     let response = undefined;
     try {
-        const result = await deleteConstant(event.name);
+        const result = await deleteConstant(event.venueID);
         response = {
             statusCode: 200,
-            body: JSON.stringify(result)
+            success: JSON.stringify(result)
         }
     } catch (err) {
         response = {
