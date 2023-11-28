@@ -11,6 +11,20 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
+    let validate = (venueID, venuePassword) => {
+        return new Promise((resolve, reject) => {
+            pool.query("SELECT * FROM Venues WHERE venueID=?", [venueID], (error, rows) => {
+                if (error)
+                    return reject(error);
+                if (rows && rows.length == 1 && rows[0].password == venuePassword) {
+                    return resolve(true);
+                } else {
+                    return resolve(false);
+                }
+            });
+        });
+    };
+
     let deleteConstant = (venueID) => {
         return new Promise((resolve, reject) => {
             pool.query("DELETE FROM Venues WHERE venueID=?", [venueID], (error, rows) => {
@@ -26,19 +40,28 @@ exports.handler = async (event) => {
     };
 
     let response = undefined;
-    try {
-        const result = await deleteConstant(event.venueID);
-        response = {
-            statusCode: 200,
-            success: JSON.stringify(result)
+    const validUser = await validate(event.venueID, event.venuePassword);
+
+    if (validUser) {
+        try {
+            const result = await deleteConstant(event.venueID);
+            response = {
+                statusCode: 200,
+                success: JSON.stringify(result)
+            }
+        } catch (err) {
+            response = {
+                statusCode: 400,
+                error: err
+            }
+        } finally {
+            pool.end();   // disconnect from database to avoid "too many connections" problem that can occur
         }
-    } catch (err) {
+    } else {
         response = {
             statusCode: 400,
-            error: err
-        }
-    } finally {
-        pool.end();   // disconnect from database to avoid "too many connections" problem that can occur
+            error: "Invalid Venue Manager credentials"
+        };
     }
 
     return response;
