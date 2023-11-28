@@ -11,6 +11,20 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
+    let validate = (adminPassword) => {
+        return new Promise((resolve, reject) => {
+            pool.query("SELECT * FROM Venues WHERE venueID=?", [venueID], (error, rows) => {
+                if (error)
+                    return reject(error);
+                if (rows && rows.length == 1 && rows[0].password == adminPassword) {
+                    return resolve(true);
+                } else {
+                    return resolve(false);
+                }
+            });
+        });
+    };
+
     let venueList = () => {
         return new Promise((resolve, reject) => {
             pool.query("SELECT * FROM Venues", [], (error, rows) => {
@@ -22,6 +36,11 @@ exports.handler = async (event) => {
     };
 
     const result = await venueList();
+    const validUser = await validate(event.adminPassword);
+
+    if (validUser) {
+
+    }
     const response = {
         statusCode: 200,
         venues: result
