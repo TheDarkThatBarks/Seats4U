@@ -13,10 +13,10 @@ exports.handler = async (event) => {
 
     let validate = (venueID, venuePassword) => {
         return new Promise((resolve, reject) => {
-            pool.query("SELECT * FROM Venues WHERE venueID=?", [venueID], (error, rows) => {
+            pool.query("SELECT * FROM Venues WHERE venueID=? AND password=?", [venueID, venuePassword], (error, rows) => {
                 if (error)
                     return reject(error);
-                if (rows && rows.length == 1 && rows[0].password == venuePassword) {
+                if (rows && rows.length == 1) {
                     return resolve(true);
                 } else {
                     return resolve(false);
@@ -25,8 +25,8 @@ exports.handler = async (event) => {
         });
     };
 
-    let response = undefined;
     const validUser = await validate(event.venueID, event.venuePassword);
+    let response = undefined;
 
     if (validUser) {
         let createShow = (venueID, name, startingPrice, month, day, year, hour, minute) => {
