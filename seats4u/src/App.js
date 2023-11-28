@@ -1,7 +1,7 @@
 import './App.css';
 
 import React from 'react'
-import { createVenue } from './controller/CreateVenue';
+import { createVenue } from './controller/CreateVenue.js';
 
 function App() {
   const [redraw, forceRedraw] = React.useState(0);

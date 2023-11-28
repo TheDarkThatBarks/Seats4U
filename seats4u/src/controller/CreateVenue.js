@@ -1,4 +1,4 @@
-//import { post } from "./Api"
+import { post } from "./API.js"
 
 export function createVenue(requestRedraw) {
     // potentially modify the model
@@ -12,13 +12,13 @@ export function createVenue(requestRedraw) {
     let password = document.getElementById("venue-password")
 
     // prepare payload for the post
-    let data = {'name': nameField.value, 
+    let data = {'venueName': nameField.value, 
                 'sideLeftRows': sideLeftRowsField.value,
-                'sideLeftCols': sideLeftColsField.value,
+                'sideLeftColumns': sideLeftColsField.value,
                 'centerRows': centerRowsField.value,
-                'centerCols': centerColsField.value,
+                'centerColumns': centerColsField.value,
                 'sideRightRows': sideRightRowsField.value,
-                'sideRightCols': sideRightColsField.value,
+                'sideRightColumns': sideRightColsField.value,
                 'password': password.value}
     
     console.log(data)
@@ -31,5 +31,5 @@ export function createVenue(requestRedraw) {
         requestRedraw()
     }
 
-    //post('/createVenue', data, handler)
+    post('/venue/createVenue', data, handler);
 }
