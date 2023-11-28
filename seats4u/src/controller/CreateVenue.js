@@ -1,4 +1,4 @@
-//import { post } from "./Api"
+import { post } from "./API"
 
 export function createVenue(requestRedraw) {
     // potentially modify the model
@@ -31,5 +31,5 @@ export function createVenue(requestRedraw) {
         requestRedraw()
     }
 
-    //post('/createVenue', data, handler)
+    post('/venue/createVenue', data, handler)
 }
