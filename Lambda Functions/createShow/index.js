@@ -11,22 +11,22 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
-    /*let alreadyExists = (name) => {
+    let validate = (venueID, venuePassword) => {
         return new Promise((resolve, reject) => {
-            pool.query("SELECT * FROM Venues WHERE name=?", [name], (error, rows) => {
+            pool.query("SELECT * FROM Venues WHERE venueID=?", [venueID], (error, rows) => {
                 if (error)
                     return reject(error);
-                if (rows && rows.length >= 1) {
+                if (rows && rows.length == 1 && rows[0]) {
                     return resolve(true);
                 } else {
                     return resolve(false);
                 }
             });
         });
-    };*/
+    };
 
     let response = undefined;
-    //const nameTaken = await alreadyExists(event.venueName);
+    const nameTaken = await validate(event.venueID, event.venuePassword);
 
     //if (!nameTaken) {
         let createVenue = (venueID, name, startingPrice, month, day, year, hour, minute) => {
@@ -52,7 +52,8 @@ exports.handler = async (event) => {
                                        event.date.day,
                                        event.date.year,
                                        event.time.hour,
-                                       event.time.minute);
+                                       event.time.minute,
+                                       event.venuePassword);
         response = {
             statusCode: 200,
             showID: showID,
