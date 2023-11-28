@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import React from 'react'
+import React from 'react';
 import { createVenue } from '../controller/CreateVenue';
 
 export const CreateVenuePage = () => {
@@ -14,7 +14,7 @@ export const CreateVenuePage = () => {
     const requestRedraw = () => {
         forceRedraw(redraw+1)
     }
-
+    
     return (
         <div className="Seats4U">
             <h1>inputs</h1>
