@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 
-import { CreateVenuePage } from './pages/CreateVenuePage';
+import { CreateVenuePage } from './Pages/CreateVenuePage';
 
 function App() {
   const [redraw, forceRedraw] = React.useState(0);
