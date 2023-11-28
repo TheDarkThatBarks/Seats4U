@@ -13,10 +13,10 @@ exports.handler = async (event) => {
 
     let validate = (venueID, venuePassword) => {
         return new Promise((resolve, reject) => {
-            pool.query("SELECT * FROM Venues WHERE venueID=?", [venueID], (error, rows) => {
+            pool.query("SELECT * FROM Venues WHERE venueID=? AND password=?", [venueID, venuePassword], (error, rows) => {
                 if (error)
                     return reject(error);
-                if (rows && rows.length == 1 && rows[0].password == venuePassword) {
+                if (rows && rows.length == 1) {
                     return resolve(true);
                 } else {
                     return resolve(false);
