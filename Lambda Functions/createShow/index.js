@@ -16,7 +16,7 @@ exports.handler = async (event) => {
             pool.query("SELECT * FROM Venues WHERE venueID=?", [venueID], (error, rows) => {
                 if (error)
                     return reject(error);
-                if (rows && rows.length == 1 && rows[0]) {
+                if (rows && rows.length == 1 && rows[0].password == venuePassword) {
                     return resolve(true);
                 } else {
                     return resolve(false);
@@ -26,10 +26,10 @@ exports.handler = async (event) => {
     };
 
     let response = undefined;
-    const nameTaken = await validate(event.venueID, event.venuePassword);
+    const validUser = await validate(event.venueID, event.venuePassword);
 
-    //if (!nameTaken) {
-        let createVenue = (venueID, name, startingPrice, month, day, year, hour, minute) => {
+    if (validUser) {
+        let createShow = (venueID, name, startingPrice, month, day, year, hour, minute) => {
             return new Promise((resolve, reject) => {
                 pool.query("INSERT into Shows(venueID,name,startingPrice,month,day,year,hour,minute) VALUES(?,?,?,?,?,?,?,?);",
                     [venueID, name, startingPrice, month, day, year, hour, minute], (error, rows) => {
@@ -45,26 +45,24 @@ exports.handler = async (event) => {
             });
         };
 
-        let showID = await createVenue(event.venueID,
-                                       event.showName,
-                                       event.startingPrice,
-                                       event.date.month,
-                                       event.date.day,
-                                       event.date.year,
-                                       event.time.hour,
-                                       event.time.minute,
-                                       event.venuePassword);
+        let showID = await createShow(event.venueID,
+                                      event.showName,
+                                      event.startingPrice,
+                                      event.date.month,
+                                      event.date.day,
+                                      event.date.year,
+                                      event.time.hour,
+                                      event.time.minute);
         response = {
             statusCode: 200,
-            showID: showID,
-            //token: token
+            showID: showID
         };
-    /*} else {
+    } else {
         response = {
             statusCode: 400,
-            error: "Venue with that name already exists"
+            error: "Invalid Venue Manager credentials"
         };
-    }*/
+    }
 
     return response;
 };
