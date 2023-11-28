@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ListShows = () => {
+export const ListShowsPage = () => {
 	return (
 		<div className="ListShows">
 			<Link to="/CreateShowPage">
@@ -9,5 +9,3 @@ const ListShows = () => {
 		</div>
 	);
 };
-
-export default ListShows;
