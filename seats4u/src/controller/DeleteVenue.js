@@ -6,7 +6,7 @@ export function deleteVenue(requestRedraw) {
     let passwordField = document.getElementById("venue-password");
 
     // prepare payload for the post
-    let data = {'venueID': nameField.value,
+    let data = {'venueName': nameField.value,
                 'venuePassword': passwordField.value};
     
     console.log(data)

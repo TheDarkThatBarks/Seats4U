@@ -7,7 +7,7 @@ export function listShows() {
 
             let str = ''
             for (let s of response.shows)
-                str += "Show: " + s.name + " | Venue Name: " + s.venueName + " | " + s.month + "/" + s.day + "/" + s.year + " | " + (Math.floor(s.hour / 10) == 0 ? "0" : "") + s.hour + ":" + (Math.floor(s.hour / 10) == 0 ? "0" : "") + s.minute + '<br>';
+                str += "Show: " + s.name + " | Venue Name: " + s.venueName + " | " + s.month + "/" + s.day + "/" + s.year + " | " + (Math.floor(s.hour / 10) == 0 ? "0" : "") + s.hour + ":" + (Math.floor(s.minute / 10) == 0 ? "0" : "") + s.minute + '<br>';
 
             // insert HTML in the <div> with 
             // constant-list
