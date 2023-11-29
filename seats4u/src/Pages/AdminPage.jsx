@@ -1,20 +1,31 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import { createVenue } from '../controller/CreateVenue';
+import { listVenues } from '../controller/ListVenues';
 
 export const AdminPage = () => {
     const [redraw, forceRedraw] = React.useState(0);
 
-    React.useEffect(()=>{}, [redraw]);
+    React.useEffect(()=>{
+        //listVenues(requestRedraw)
+    }, [redraw]);
 
     const navigate = useNavigate();
 
     const requestRedraw = () => {
         forceRedraw(redraw+1);
     }
+
+    const listVenuesHandler = (e) => {
+        listVenues()
+        requestRedraw()
+    }
     
     return (
         <div>
+            Admin Password: <input id="admin-pass"/>
+            <button onClick={listVenuesHandler}>List Venues</button>
+            result: <input id="db-response" readOnly/>
+            <div id="venue-list"></div>
         </div>
     );
 }
