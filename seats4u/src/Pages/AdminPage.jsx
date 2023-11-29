@@ -25,6 +25,7 @@ export const AdminPage = () => {
             Admin Password: <input id="admin-pass"/>
             <button onClick={listVenuesHandler}>List Venues</button>
             result: <input id="db-response" readOnly/>
+            <button onClick={() => navigate(-1)}>Back</button>
             <div id="venue-list"></div>
         </div>
     );

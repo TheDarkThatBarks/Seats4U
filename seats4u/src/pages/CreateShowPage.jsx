@@ -1,4 +1,4 @@
-//import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import React from 'react'
 import { createShow } from '../controller/CreateShow';
 
@@ -6,6 +6,8 @@ export const CreateShowPage = () => {
     const [redraw, forceRedraw] = React.useState(0);
 
     React.useEffect(()=>{}, [redraw]);
+
+    const navigate = useNavigate();
 
     const createShowHandler = (e) => {
         createShow(requestRedraw)
@@ -29,6 +31,7 @@ export const CreateShowPage = () => {
                 Venue Password: <input id="venue-password"/>
             <button onClick={createShowHandler}>Create</button>
             Result: <input id="db-response" readOnly/>
+            <button onClick={() => navigate(-1)}>Back</button>
         </div>
     );
 }

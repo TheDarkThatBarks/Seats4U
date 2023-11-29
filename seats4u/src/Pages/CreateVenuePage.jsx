@@ -30,9 +30,10 @@ export const CreateVenuePage = () => {
             password: <input id="venue-password"/>
 
             <button onClick={createVenueHandler}>Create</button>
-            <button onClick={() => navigate(-1)}>Return to Home</button>
 
             result: <input id="db-response" readOnly/>
+
+            <button onClick={() => navigate(-1)}>Back</button>
         </div>
     );
 }

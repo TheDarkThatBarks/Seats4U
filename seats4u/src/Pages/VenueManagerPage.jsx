@@ -25,6 +25,7 @@ export const VenueManagerPage = () => {
             Venue Password: <input id="venue-password"/>
             <button onClick={deleteVenueManager}>Delete</button>
             result: <input id="db-response" readOnly/>
+            <button onClick={() => navigate(-1)}>Back</button>
 		</div>
 	);
 };
