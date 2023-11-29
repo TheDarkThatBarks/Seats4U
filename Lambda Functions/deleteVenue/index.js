@@ -11,9 +11,9 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
-    let validate = (venueID, venuePassword) => {
+    let validate = (venueName, venuePassword) => {
         return new Promise((resolve, reject) => {
-            pool.query("SELECT * FROM Venues WHERE venueID=? AND password=?", [venueID, venuePassword], (error, rows) => {
+            pool.query("SELECT * FROM Venues WHERE name=? AND password=?", [venueName, venuePassword], (error, rows) => {
                 if (error)
                     return reject(error);
                 if (rows && rows.length == 1) {
@@ -25,9 +25,9 @@ exports.handler = async (event) => {
         });
     };
 
-    let deleteConstant = (venueID) => {
+    let deleteConstant = (venueName) => {
         return new Promise((resolve, reject) => {
-            pool.query("DELETE FROM Venues WHERE venueID=?", [venueID], (error, rows) => {
+            pool.query("DELETE FROM Venues WHERE name=?", [venueName], (error, rows) => {
                 if (error)
                     return reject(error);
                 if (rows && rows.affectedRows == 1) {
@@ -40,11 +40,11 @@ exports.handler = async (event) => {
     };
 
     let response = undefined;
-    const validUser = await validate(event.venueID, event.venuePassword);
+    const validUser = await validate(event.venueName, event.venuePassword);
 
     if (validUser) {
         try {
-            const result = await deleteConstant(event.venueID);
+            const result = await deleteConstant(event.venueName);
             response = {
                 statusCode: 200,
                 success: JSON.stringify(result)
