@@ -18,7 +18,7 @@ export function listVenues() {
 
         let str = '';
             for (let v of json.venues) {
-                str += v.name + '<br>';
+                str += "Venue Name: " + v.name + " | Password: " + v.password + '<br>';
             }
 
             // insert HTML in the <div> with 
