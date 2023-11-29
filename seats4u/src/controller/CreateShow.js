@@ -30,7 +30,12 @@ export function createShow(requestRedraw) {
         // clear inputs
         //nameField.value = ''
         //valueField.value = ''
-        requestRedraw()
+        if(json.statusCode === 200) {
+            document.getElementById("db-response").value = "SUCCESS!";
+        } else {
+            document.getElementById("db-response").value = "Failure...";
+        }
+        requestRedraw();
     }
 
     post('/venue/createShow', data, handler);

@@ -28,6 +28,7 @@ export const CreateShowPage = () => {
                 Show Minute: <input id="show-minute"/>
                 Venue Password: <input id="venue-password"/>
             <button onClick={createShowHandler}>Create</button>
+            Result: <input id="db-response" readOnly/>
         </div>
     );
 }
