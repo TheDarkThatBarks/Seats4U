@@ -1,8 +1,8 @@
 import { get } from "./API.js";
 
-export function getVenues() {
+export function listVenues() {
     // this sends the ACTUAL POST and retrieves the answer.
-    get('/venue/listVenues')
+    get('/admin/listVenues')
         .then(function (response) {
             let str = '';
             for (let c of response.constants) {

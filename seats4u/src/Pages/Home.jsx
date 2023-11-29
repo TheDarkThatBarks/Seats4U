@@ -1,25 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { getVenues } from '../controller/GetVenues';
+import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
-	const [redraw, forceRedraw] = React.useState(0);
+	const [redraw] = React.useState(0);
 
-    React.useEffect(()=>{
-        getVenues()
-    }, [redraw]);
-
-    // this function requests the redraw, and can be passed as an argument to other functions
-    //const requestRedraw = () => {
-    //    forceRedraw(redraw+1)
-    //}
+	const navigate = useNavigate();
 
 	return (
 		<div className="Home">
-			<Link to="/CreateVenuePage">
-				<div className="btn">Create Venue</div>
-			</Link>
-			<div id="venue-list"></div>
+			<button onClick={() => navigate('venuemanager')}>Venue Manager Page</button>
+			<button onClick={() => navigate('admin')}>Admin Page</button>
 		</div>
 	);
 };

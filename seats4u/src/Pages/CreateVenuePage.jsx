@@ -19,7 +19,7 @@ export const CreateVenuePage = () => {
     
     return (
         <div className="Seats4U">
-            <h1>inputs</h1>
+            <h1>Enter Information Here</h1>
             name: <input id="venue-name"/>
             side left rows: <input id="venue-sideLeft-rows"/>
             side left cols: <input id="venue-sideLeft-columns"/>
