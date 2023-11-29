@@ -26,6 +26,7 @@ export const CreateShowPage = () => {
                 Show Year: <input id="show-year"/>
                 Show Hour: <input id="show-hour"/>
                 Show Minute: <input id="show-minute"/>
+                Venue Password: <input id="venue-password"/>
             <button onClick={createShowHandler}>Create</button>
         </div>
     );

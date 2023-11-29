@@ -10,16 +10,18 @@ export function createShow(requestRedraw) {
     let yearField = document.getElementById("show-year")
     let hourField = document.getElementById("show-hour")
     let minuteField = document.getElementById("show-minute")
+    let venuePassword = document.getElementById("venue-password")
 
     // prepare payload for the post
     let data = {'venueName': venueName.value,
                 'showName': nameField.value, 
-                'price': priceField.value,
+                'startingPrice': priceField.value,
                 'month': monthField.value,
                 'day': dayField.value,
                 'year': yearField.value,
                 'hour': hourField.value,
-                'minute': minuteField.value}
+                'minute': minuteField.value,
+                'venuePassword': venuePassword.value}
     
     console.log(data)
 
@@ -31,5 +33,5 @@ export function createShow(requestRedraw) {
         requestRedraw()
     }
 
-    post('/show/createShow', data, handler);
+    post('/venue/createShow', data, handler);
 }
