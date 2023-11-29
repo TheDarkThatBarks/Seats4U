@@ -25,13 +25,28 @@ exports.handler = async (event) => {
         });
     };
 
-    let deleteConstant = (venueName) => {
+    let deleteShows = (venueName) => {
         return new Promise((resolve, reject) => {
-            pool.query("DELETE FROM Venues WHERE name=?", [venueName], (error, rows) => {
+            pool.query("DELETE FROM Shows WHERE venueName=?", [venueName], (error, rows) => {
+                if (error)
+                    return reject(error);
+                if (rows) {
+                    return resolve(true);
+                } else {
+                    return resolve(false);
+                }
+            });
+        });
+    };
+
+    let deleteVenue = (venueName) => {
+        return new Promise((resolve, reject) => {
+            pool.query("DELETE FROM Venues WHERE name=?", [venueName], async (error, rows) => {
                 if (error)
                     return reject(error);
                 if (rows && rows.affectedRows == 1) {
-                    return resolve(true);
+                    const showsDeleted = await deleteShows(venueName);
+                    return resolve(showsDeleted);
                 } else {
                     return resolve(false);
                 }
@@ -44,7 +59,7 @@ exports.handler = async (event) => {
 
     if (validUser) {
         try {
-            const result = await deleteConstant(event.venueName);
+            const result = await deleteVenue(event.venueName);
             response = {
                 statusCode: 200,
                 success: JSON.stringify(result)
