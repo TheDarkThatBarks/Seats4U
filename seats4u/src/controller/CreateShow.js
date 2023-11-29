@@ -4,14 +4,20 @@ export function createShow(requestRedraw) {
     // potentially modify the model
     let nameField = document.getElementById("show-name")
     let priceField = document.getElementById("show-price")
-    let dateField = document.getElementById("show-date")
-    let timeField = document.getElementById("show-time")
+    let monthField = document.getElementById("show-month")
+    let dayField = document.getElementById("show-day")
+    let yearField = document.getElementById("show-year")
+    let hourField = document.getElementById("show-hour")
+    let minuteField = document.getElementById("show-minute")
 
     // prepare payload for the post
     let data = {'showName': nameField.value, 
                 'price': priceField.value,
-                'date': dateField.value,
-                'time': timeField.value}
+                'month': monthField.value,
+                'day': dayField.value,
+                'year': yearField.value,
+                'hour': hourField.value,
+                'minute': minuteField.value}
     
     console.log(data)
 

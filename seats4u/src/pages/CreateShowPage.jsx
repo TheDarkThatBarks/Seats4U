@@ -20,8 +20,11 @@ export const CreateShowPage = () => {
             <h1>inputs</h1>
                 name: <input id="show-name"/>
                 price: <input id="show-price"/>
-                date: <input id="show-date"/>
-                time: <input id="show-time"/>
+                month: <input id="show-month"/>
+                day: <input id="show-day"/>
+                year: <input id="show-year"/>
+                hour: <input id="show-hour"/>
+                minute: <input id="show-minute"/>
             <button onClick={createShowHandler}>Create</button>
         </div>
     );
