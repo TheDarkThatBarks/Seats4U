@@ -11,9 +11,9 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
-    let validate = (venueID, venuePassword) => {
+    let validate = (venueName, venuePassword) => {
         return new Promise((resolve, reject) => {
-            pool.query("SELECT * FROM Venues WHERE venueID=? AND password=?", [venueID, venuePassword], (error, rows) => {
+            pool.query("SELECT * FROM Venues WHERE name=? AND password=?", [venueName, venuePassword], (error, rows) => {
                 if (error)
                     return reject(error);
                 if (rows && rows.length == 1) {
@@ -25,14 +25,14 @@ exports.handler = async (event) => {
         });
     };
 
-    const validUser = await validate(event.venueID, event.venuePassword);
+    const validUser = await validate(event.venueName, event.venuePassword);
     let response = undefined;
 
     if (validUser) {
-        let createShow = (venueID, name, startingPrice, month, day, year, hour, minute) => {
+        let createShow = (venueName, name, startingPrice, month, day, year, hour, minute) => {
             return new Promise((resolve, reject) => {
-                pool.query("INSERT into Shows(venueID,name,startingPrice,month,day,year,hour,minute) VALUES(?,?,?,?,?,?,?,?);",
-                    [venueID, name, startingPrice, month, day, year, hour, minute], (error, rows) => {
+                pool.query("INSERT into Shows(venueName,name,startingPrice,month,day,year,hour,minute) VALUES(?,?,?,?,?,?,?,?);",
+                    [venueName, name, startingPrice, month, day, year, hour, minute], (error, rows) => {
                     if (error)
                         return reject(error);
                     if (rows && rows.affectedRows == 1) {
@@ -45,7 +45,7 @@ exports.handler = async (event) => {
             });
         };
 
-        let showID = await createShow(event.venueID,
+        let showID = await createShow(event.venueName,
                                       event.showName,
                                       event.startingPrice,
                                       event.date.month,
