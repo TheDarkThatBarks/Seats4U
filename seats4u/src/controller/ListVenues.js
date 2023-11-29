@@ -26,20 +26,4 @@ export function listVenues() {
     }
 
     post('/admin/listVenues', data, handler)
-    /*.then(function (response) {
-        console.log(response.venues)
-        let str = '';
-        for (let v of response.venues) {
-            str += v.name + '<br>';
-        }
-
-        // insert HTML in the <div> with 
-        // constant-list
-        let cd = document.getElementById('venue-list')
-        cd.innerHTML = str
-
-    }).catch(function (error) {
-        // not much to do
-        console.log(error)
-    })*/
 }
