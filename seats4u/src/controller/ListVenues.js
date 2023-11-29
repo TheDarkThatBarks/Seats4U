@@ -5,43 +5,41 @@ export function listVenues() {
 
     let adminPass = document.getElementById("admin-pass");
 
-    let data = {'adminPassword': adminPass.value}
+    let data = { 'adminPassword': adminPass.value }
 
     const handler = (json) => {
         console.log(json)
 
-        if(json.statusCode === 200) {
+        if (json.statusCode === 200) {
             document.getElementById("db-response").value = "SUCCESS!";
+            let str = '';
+            for (let v of json.venues)
+                str += v.name + '<br>';
+
+            // insert HTML in the <div> with 
+            // constant-list
+            let cd = document.getElementById('venue-list')
+            cd.innerHTML = str
         } else {
             document.getElementById("db-response").value = "Failure...";
         }
-
-        let str = '';
-            for (let v of json.venues) {
-                str += v.name + '<br>';
-            }
-
-            // insert HTML in the <div> with 
-            // constant-list
-            let cd = document.getElementById('venue-list')
-            cd.innerHTML = str
     }
 
     post('/admin/listVenues', data, handler)
-        /*.then(function (response) {
-            console.log(response.venues)
-            let str = '';
-            for (let v of response.venues) {
-                str += v.name + '<br>';
-            }
+    /*.then(function (response) {
+        console.log(response.venues)
+        let str = '';
+        for (let v of response.venues) {
+            str += v.name + '<br>';
+        }
 
-            // insert HTML in the <div> with 
-            // constant-list
-            let cd = document.getElementById('venue-list')
-            cd.innerHTML = str
+        // insert HTML in the <div> with 
+        // constant-list
+        let cd = document.getElementById('venue-list')
+        cd.innerHTML = str
 
-        }).catch(function (error) {
-            // not much to do
-            console.log(error)
-        })*/
+    }).catch(function (error) {
+        // not much to do
+        console.log(error)
+    })*/
 }
