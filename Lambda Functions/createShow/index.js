@@ -31,8 +31,8 @@ exports.handler = async (event) => {
     if (validUser) {
         let createShow = (venueName, name, startingPrice, month, day, year, hour, minute) => {
             return new Promise((resolve, reject) => {
-                pool.query("INSERT into Shows(venueName,name,startingPrice,month,day,year,hour,minute) VALUES(?,?,?,?,?,?,?,?);",
-                    [venueName, name, startingPrice, month, day, year, hour, minute], (error, rows) => {
+                pool.query("INSERT into Shows(venueName,name,startingPrice,month,day,year,hour,minute,active,locked) VALUES(?,?,?,?,?,?,?,?,?,?);",
+                    [venueName, name, startingPrice, month, day, year, hour, minute, 0, 0], (error, rows) => {
                     if (error)
                         return reject(error);
                     if (rows && rows.affectedRows == 1) {
