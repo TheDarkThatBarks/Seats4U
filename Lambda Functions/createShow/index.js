@@ -48,11 +48,11 @@ exports.handler = async (event) => {
         let showID = await createShow(event.venueName,
                                       event.showName,
                                       event.startingPrice,
-                                      event.date.month,
-                                      event.date.day,
-                                      event.date.year,
-                                      event.time.hour,
-                                      event.time.minute);
+                                      event.month,
+                                      event.day,
+                                      event.year,
+                                      event.hour,
+                                      event.minute);
         response = {
             statusCode: 200,
             showID: showID

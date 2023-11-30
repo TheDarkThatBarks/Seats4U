@@ -1,5 +1,5 @@
 // replace with your own URL based on deployed API stage
-const url = 'https://vcao3q5in7.execute-api.us-east-2.amazonaws.com/API'
+const url = 'https://ylkg2q1l03.execute-api.us-east-2.amazonaws.com/API'
 
 // Assume resource always starts with a "/"
 function api(resource) {
