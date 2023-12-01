@@ -16,7 +16,7 @@ export const Home = () => {
 	
     const search = () => {
         listShows(document.getElementById("search").value);
-    }
+    };
 
     const validateVenueManager = async () => {
         let venueName = document.getElementById("venue-name");
