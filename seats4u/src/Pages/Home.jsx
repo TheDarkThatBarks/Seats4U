@@ -6,13 +6,16 @@ export const Home = () => {
 	const [redraw, forceRedraw] = React.useState(0);
 
 	React.useEffect(()=>{
-		listShows()
+		listShows("")
 	}, [redraw]);
 
 	const requestRedraw = () => {
-		forceRedraw(redraw+1)
+		forceRedraw(redraw + 1)
 	}
 	
+    const search = () => {
+        listShows(document.getElementById("search").value);
+    }
 
 	const navigate = useNavigate();
 
@@ -20,6 +23,8 @@ export const Home = () => {
 		<div className="Home">
 			<button onClick={() => navigate('venuemanager')}>Venue Manager Page</button>
 			<button onClick={() => navigate('admin')}>Admin Page</button>
+            Search: <input id="search"/>
+            <button onClick={search}>Search</button>
 			<div id="show-list"></div>
 		</div>
 	);
