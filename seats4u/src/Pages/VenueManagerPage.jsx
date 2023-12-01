@@ -14,14 +14,14 @@ export const VenueManagerPage = () => {
 	const navigate = useNavigate();
 
     const deleteVenueManager = (e) => {
-        deleteVenue(requestRedraw)
+        deleteVenue(requestRedraw);
     }
 
 	return (
 		<div className="Venue Manager">
 			<button onClick={() => navigate('createvenue')}>Create Venue</button>
             <button onClick={() => navigate('createshow')}>Create Show</button>
-            Venue Name: <input id="venue-id"/>
+            Venue Name: <input id="venue-name"/>
             Venue Password: <input id="venue-password"/>
             <button onClick={deleteVenueManager}>Delete</button>
             result: <input id="db-response" readOnly/>
