@@ -15,7 +15,7 @@ export const Home = () => {
 	
     const search = () => {
         listShows(document.getElementById("search").value);
-    }
+    };
 
 	const navigate = useNavigate();
 
