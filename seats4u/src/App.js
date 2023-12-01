@@ -9,15 +9,21 @@ import { CreateShowPage } from './Pages/CreateShowPage.jsx';
 import { AdminPage } from './Pages/AdminPage.jsx';
 import { VenueManagerPage } from './Pages/VenueManagerPage.jsx';
 
+import { Venue, Show } from './model/Model.js'
+
 function App() {
+    let v = new Venue("test", 123, "password1");
     return (
         <div className="Seats4U">
+            <input readOnly id="data-venue-name" value=""/>
+            <input readOnly id="data-venue-id" value=""/>
+            <input readOnly id="data-venue-password" value=""/>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/venuemanager/createvenue" element={<CreateVenuePage />} />
-                <Route path="/venuemanager/createshow" element={<CreateShowPage />} />
-                <Route path="/admin" element={<AdminPage />} />
-                <Route path="/venuemanager" element={<VenueManagerPage />} />
+                <Route path="/" element={<Home/>}/>
+                <Route path="/createvenue" element={<CreateVenuePage/>}/>
+                <Route path="/venuemanager/createshow" element={<CreateShowPage/>}/>
+                <Route path="/admin" element={<AdminPage/>}/>
+                <Route path="/venuemanager" element={<VenueManagerPage/>}/>
             </Routes>
         </div>
     );

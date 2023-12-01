@@ -2,7 +2,7 @@ import { post } from "./API.js"
 
 export function createShow(requestRedraw) {
     // potentially modify the model
-    let venueName = document.getElementById("venue-name")
+    let venueName = document.getElementById("data-venue-name")
     let nameField = document.getElementById("show-name")
     let priceField = document.getElementById("show-price")
     let monthField = document.getElementById("show-month")
@@ -10,7 +10,7 @@ export function createShow(requestRedraw) {
     let yearField = document.getElementById("show-year")
     let hourField = document.getElementById("show-hour")
     let minuteField = document.getElementById("show-minute")
-    let venuePassword = document.getElementById("venue-password")
+    let venuePassword = document.getElementById("data-venue-password")
 
     // prepare payload for the post
     let data = {'venueName': venueName.value,

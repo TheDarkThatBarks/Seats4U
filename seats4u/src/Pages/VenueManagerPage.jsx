@@ -21,8 +21,6 @@ export const VenueManagerPage = () => {
 		<div className="Venue Manager">
 			<button onClick={() => navigate('createvenue')}>Create Venue</button>
             <button onClick={() => navigate('createshow')}>Create Show</button>
-            Venue Name: <input id="venue-name"/>
-            Venue Password: <input id="venue-password"/>
             <button onClick={deleteVenueManager}>Delete</button>
             result: <input id="db-response" readOnly/>
             <button onClick={() => navigate(-1)}>Back</button>
