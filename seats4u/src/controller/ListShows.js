@@ -1,10 +1,12 @@
 import { get } from "./API"
 
-export function listShows() {
+export function listShows(searchStr) {
     // this sends the ACTUAL POST and retrieves the answer.
     get('/consumer/listShows')
         .then(function (response) {
-
+            if (searchStr != "")
+                response.shows = response.shows.filter((show) => {return show.name.toLowerCase().includes(searchStr.toLowerCase())});
+            
             let str = ''
             for (let s of response.shows)
                 str += "Show: " + s.name + " | Venue Name: " + s.venueName + " | " + s.month + "/" + s.day + "/" + s.year + " | " + (Math.floor(s.hour / 10) == 0 ? "0" : "") + s.hour + ":" + (Math.floor(s.minute / 10) == 0 ? "0" : "") + s.minute + '<br>';
