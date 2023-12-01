@@ -1,12 +1,12 @@
 import { post } from "./API.js";
 
-export function deleteVenue(requestRedraw) {
+export function activateShow(requestRedraw) {
     // potentially modify the model
-    let nameField = document.getElementById("venue-name");
+    let nameField = document.getElementById("show-name");
     let passwordField = document.getElementById("venue-password");
 
     // prepare payload for the post
-    let data = {'venueName': nameField.value,
+    let data = {'showName': nameField.value,
                 'venuePassword': passwordField.value};
     
     console.log(data)
@@ -18,12 +18,12 @@ export function deleteVenue(requestRedraw) {
         passwordField.value = '';
 
         if(json.statusCode === 200) {
-            document.getElementById("db-response").value = "SUCCESS!";
+            //document.getElementById("db-response").value = "SUCCESS!";
         } else {
-            document.getElementById("db-response").value = "Failure...";
+            //document.getElementById("db-response").value = "Failure...";
         }
         requestRedraw();
     }
 
-    post('/venue/deleteVenue', data, handler);
+    post('/venue/activateShow', data, handler);
 }
