@@ -52,6 +52,8 @@ export const Home = () => {
             Venue Password: <input id="venue-password"/>
             <button onClick={validateVenueManager}>Venue Manager Page</button>
             <button onClick={() => navigate('admin')}>Admin Page</button>
+            Search: <input id="search"/>
+            <button onClick={search}>Search</button>
             <div id="show-list"></div>
         </div>
     );
