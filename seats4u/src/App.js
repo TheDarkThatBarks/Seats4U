@@ -9,10 +9,10 @@ import { CreateShowPage } from './Pages/CreateShowPage.jsx';
 import { AdminPage } from './Pages/AdminPage.jsx';
 import { VenueManagerPage } from './Pages/VenueManagerPage.jsx';
 
-import { Venue, Show } from './model/Model.js'
+//import { Venue, Show } from './model/Model.js'
 
 function App() {
-    let v = new Venue("test", 123, "password1");
+    //let v = new Venue("test", 123, "password1");
     return (
         <div className="Seats4U">
             <input readOnly id="data-venue-name" value=""/>

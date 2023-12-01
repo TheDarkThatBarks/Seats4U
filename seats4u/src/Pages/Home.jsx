@@ -48,8 +48,8 @@ export const Home = () => {
     return (
         <div className="Home">
             <button onClick={() => navigate('createvenue')}>Create Venue</button>
-            Venue Name: <input id="venue-name" />
-            Venue Password: <input id="venue-password" />
+            Venue Name: <input id="venue-name"/>
+            Venue Password: <input id="venue-password"/>
             <button onClick={validateVenueManager}>Venue Manager Page</button>
             <button onClick={() => navigate('admin')}>Admin Page</button>
             <div id="show-list"></div>
