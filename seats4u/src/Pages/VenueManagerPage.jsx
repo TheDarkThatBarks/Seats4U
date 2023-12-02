@@ -19,7 +19,6 @@ export const VenueManagerPage = () => {
 
 	return (
 		<div className="Venue Manager">
-			<button onClick={() => navigate('createvenue')}>Create Venue</button>
             <button onClick={() => navigate('createshow')}>Create Show</button>
             <button onClick={deleteVenueManager}>Delete</button>
             result: <input id="db-response" readOnly/>
