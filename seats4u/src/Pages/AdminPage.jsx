@@ -7,29 +7,23 @@ export const AdminPage = () => {
     const [redraw, forceRedraw] = React.useState(0);
 
     React.useEffect(()=>{
-        //listVenues(requestRedraw)
+        listVenues();
     }, [redraw]);
 
     const navigate = useNavigate();
 
     const requestRedraw = () => {
-        forceRedraw(redraw+1);
-    }
-
-    const listVenuesHandler = () => {
-        listVenues()
-        requestRedraw()
-    }
+        forceRedraw(redraw + 1);
+    };
 
     const deleteVenueManager = () => {
         document.getElementById("data-venue-name").value = document.getElementById("venue-name").value;
         document.getElementById("data-venue-password").value = document.getElementById("venue-password").value;
         deleteVenue(requestRedraw);
-    }
+    };
     
     return (
         <div>
-            <button onClick={listVenuesHandler}>List Venues</button>
             <br></br>
             Venue Name: <input id="venue-name"/>
             Venue Password: <input id="venue-password"/>

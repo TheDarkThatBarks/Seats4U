@@ -5,17 +5,18 @@ import { deleteVenue } from '../controller/DeleteVenue';
 export const VenueManagerPage = () => {
 	const [redraw, forceRedraw] = React.useState(0);
 
-    React.useEffect(()=>{}, [redraw]);
+    React.useEffect(() => {}, [redraw]);
 
     const requestRedraw = () => {
-        forceRedraw(redraw+1)
-    }
+        forceRedraw(redraw + 1);
+    };
 
 	const navigate = useNavigate();
 
     const deleteVenueManager = (e) => {
         deleteVenue(requestRedraw);
-    }
+        navigate(-1);
+    };
 
 	return (
 		<div className="Venue Manager">
@@ -23,6 +24,7 @@ export const VenueManagerPage = () => {
             <button onClick={deleteVenueManager}>Delete</button>
             result: <input id="db-response" readOnly/>
             <button onClick={() => navigate(-1)}>Back</button>
+            <div id="venue-show-list"/>
 		</div>
 	);
 };
