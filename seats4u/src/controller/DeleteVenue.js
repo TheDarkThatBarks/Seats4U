@@ -2,8 +2,8 @@ import { post } from "./API.js";
 
 export function deleteVenue(requestRedraw) {
     // potentially modify the model
-    let nameField = document.getElementById("venue-id");
-    let passwordField = document.getElementById("venue-password");
+    let nameField = document.getElementById("data-venue-name");
+    let passwordField = document.getElementById("data-venue-password");
 
     // prepare payload for the post
     let data = {'venueName': nameField.value,

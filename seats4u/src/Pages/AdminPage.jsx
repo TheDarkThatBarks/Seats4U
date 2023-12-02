@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { listVenues } from '../controller/ListVenues';
+import { deleteVenue } from '../controller/DeleteVenue';
 
 export const AdminPage = () => {
     const [redraw, forceRedraw] = React.useState(0);
@@ -15,16 +16,27 @@ export const AdminPage = () => {
         forceRedraw(redraw+1);
     }
 
-    const listVenuesHandler = (e) => {
+    const listVenuesHandler = () => {
         listVenues()
         requestRedraw()
+    }
+
+    const deleteVenueManager = () => {
+        document.getElementById("data-venue-name").value = document.getElementById("venue-name").value;
+        document.getElementById("data-venue-password").value = document.getElementById("venue-password").value;
+        deleteVenue(requestRedraw);
     }
     
     return (
         <div>
-            Admin Password: <input id="admin-pass"/>
             <button onClick={listVenuesHandler}>List Venues</button>
+            <br></br>
+            Venue Name: <input id="venue-name"/>
+            Venue Password: <input id="venue-password"/>
+            <button onClick={deleteVenueManager}>Delete</button>
+            <br></br>
             result: <input id="db-response" readOnly/>
+            <br></br>
             <button onClick={() => navigate(-1)}>Back</button>
             <div id="venue-list"></div>
         </div>
