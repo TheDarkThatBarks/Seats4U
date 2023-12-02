@@ -43,6 +43,21 @@ export const Home = () => {
         post('/venue/login', data, handler);
     };
 
+    const validateAdmin = () => {
+        let adminPassword = document.getElementById("admin-password");
+        let data = {'adminPassword': adminPassword.value};
+
+        const handler = (json) => {
+            console.log(json);
+            if (json.statusCode === 200) {
+                document.getElementById("data-admin-password").value = adminPassword.value;
+                navigate('admin');
+            }
+        };
+
+        post('/admin/login', data, handler);
+    }
+
     const navigate = useNavigate();
 
     return (
@@ -51,6 +66,7 @@ export const Home = () => {
             Venue Name: <input id="venue-name"/>
             Venue Password: <input id="venue-password"/>
             <button onClick={validateVenueManager}>Venue Manager Page</button>
+            Admin Password: <input id="admin-password"/>
             <button onClick={() => navigate('admin')}>Admin Page</button>
             Search: <input id="search"/>
             <button onClick={search}>Search</button>

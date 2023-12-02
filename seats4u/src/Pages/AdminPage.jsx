@@ -22,6 +22,8 @@ export const AdminPage = () => {
     }
 
     const deleteVenueManager = () => {
+        document.getElementById("data-venue-name").value = document.getElementById("venue-name").value;
+        document.getElementById("data-venue-password").value = document.getElementById("venue-password").value;
         deleteVenue(requestRedraw);
     }
     
