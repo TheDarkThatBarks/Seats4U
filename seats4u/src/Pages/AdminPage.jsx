@@ -29,7 +29,6 @@ export const AdminPage = () => {
     
     return (
         <div>
-            Admin Password: <input id="admin-pass"/>
             <button onClick={listVenuesHandler}>List Venues</button>
             <br></br>
             Venue Name: <input id="venue-name"/>

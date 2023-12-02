@@ -3,7 +3,7 @@ import { post } from "./API.js";
 export function listVenues() {
     // this sends the ACTUAL POST and retrieves the answer.
 
-    let adminPass = document.getElementById("admin-pass");
+    let adminPass = document.getElementById("data-admin-password");
 
     let data = { 'adminPassword': adminPass.value }
 
