@@ -1,24 +1,24 @@
-import { get } from "./API"
+import { post } from "./API.js";
 
-export function listShowsByVenue(venueName) {
-    // this sends the ACTUAL POST and retrieves the answer.
-    get('/consumer/listShows')
-        .then(function (response) {
-            if (searchStr !== "")
-                response.shows = response.shows.filter((show) => {return show.name.toLowerCase().includes(searchStr.toLowerCase())});
-            
-            let str = ''
-            for (let s of response.shows)
-                str += "Show: " + s.name + " | Venue Name: " + s.venueName + " | " + s.month + "/" + s.day + "/" + s.year + " | " + (Math.floor(s.hour / 10) === 0 ? "0" : "") + s.hour + ":" + (Math.floor(s.minute / 10) === 0 ? "0" : "") + s.minute + '<br>';
+export function listShowsByVenue() {
+    // potentially modify the model
+    let nameField = document.getElementById("data-venue-name");
+    let passwordField = document.getElementById("data-venue-password");
 
-            // insert HTML in the <div> with 
-            // constant-list
-            let cd = document.getElementById('show-list')
-            cd.innerHTML = str
+    // prepare payload for the post
+    let data = {'venueName': nameField.value,
+                'venuePassword': passwordField.value};
+    
+    console.log(data)
 
-        })
-        .catch(function (error) {
-            // not much to do
-            console.log(error)
-        })
+    const handler = (json) => {
+        console.log(json);
+        let str = "";
+            for (let s of json.shows)
+                str += "Show ID: " + s.showID + " | Show: " + s.name + " | Venue Name: " + s.venueName + " | " + s.month + "/" + s.day + "/" + s.year + " | " + (Math.floor(s.hour / 10) === 0 ? "0" : "") + s.hour + ":" + (Math.floor(s.minute / 10) === 0 ? "0" : "") + s.minute + '<br>';
+
+        document.getElementById("venue-show-list").innerHTML = str;
     }
+
+    post('/venue/listShows', data, handler);
+}

@@ -1,11 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { deleteVenue } from '../controller/DeleteVenue';
+import { listShowsByVenue } from '../controller/ListShowsByVenue';
 
 export const VenueManagerPage = () => {
 	const [redraw, forceRedraw] = React.useState(0);
 
-    React.useEffect(() => {}, [redraw]);
+    React.useEffect(() => {
+        listShowsByVenue()
+    }, [redraw]);
 
     const requestRedraw = () => {
         forceRedraw(redraw + 1);
