@@ -29,10 +29,27 @@ exports.handler = async (event) => {
     let response = undefined;
 
     if (validUser) {
+        let getVenue = (venueName) => {
+            return new Promise((resolve, reject) => {
+                pool.query("SELECT * FROM Venues WHERE name=?", [venueName], (error, rows) => {
+                    if (error)
+                        return reject(error);
+                    if (rows && rows.length == 1) {
+                        return resolve(rows[0]);
+                    } else {
+                        return resolve(false);
+                    }
+                });
+            });
+        };
+        
+        let venue = await getVenue(event.venueName);
+        let totalSeats = (venue.sideLeftRows * venue.sideLeftColumns) + (venue.centerRows * venue.centerColumns) + (venue.sideRightRows * venue.sideRightColumns);
+
         let createShow = (venueName, name, startingPrice, month, day, year, hour, minute) => {
             return new Promise((resolve, reject) => {
-                pool.query("INSERT into Shows(venueName,name,startingPrice,month,day,year,hour,minute,active,locked) VALUES(?,?,?,?,?,?,?,?,?,?);",
-                    [venueName, name, startingPrice, month, day, year, hour, minute, 0, 0], (error, rows) => {
+                pool.query("INSERT into Shows(venueName,name,startingPrice,month,day,year,hour,minute,active,locked) VALUES(?,?,?,?,?,?,?,?,0,0,NULL,?,0);",
+                    [venueName, name, startingPrice, month, day, year, hour, minute, totalSeats], (error, rows) => {
                     if (error)
                         return reject(error);
                     if (rows && rows.affectedRows == 1) {
@@ -53,6 +70,35 @@ exports.handler = async (event) => {
                                       event.year,
                                       event.hour,
                                       event.minute);
+
+        const createSeat = (showID, section, row, column) => {
+            return new Promise((resolve, reject) => {
+                pool.query("INSERT into Seats(showID,section,row,column,sold) VALUES(?,?,?,?,0);",
+                    [showID, section, row, column], (error, rows) => {
+                    if (error)
+                        return reject(error);
+                    if (rows && rows.affectedRows == 1) {
+                        console.log(rows.insertId);
+                        return resolve(rows.insertId);
+                    } else {
+                        return resolve(false);
+                    }
+                });
+            });
+        };
+
+        for (let r = 1; r <= venue.sideLeftRows; r++) {
+            for (let c = 1; c <= venue.sideLeftColumns; c++)
+                await createSeat(showID, "sideLeft", r, c);
+        }
+        for (let r = 1; r <= venue.centerRows; r++) {
+            for (let c = 1; c <= venue.centerColumns; c++)
+                await createSeat(showID, "center", r, c);
+        }
+        for (let r = 1; r <= venue.sideRightRows; r++) {
+            for (let c = 1; c <= venue.sideRightColumns; c++)
+                await createSeat(showID, "sideRight", r, c);
+        }
         response = {
             statusCode: 200,
             showID: showID
