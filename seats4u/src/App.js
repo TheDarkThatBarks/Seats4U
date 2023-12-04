@@ -21,7 +21,6 @@ function App() {
             <input readOnly id="data-venue-password" value=""/>
             <input readOnly id="data-admin-password" value=""/>
             <input readOnly id="data-show-id" value=""/>
-            <input readOnly id="data-show-name" value=""/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/createvenue" element={<CreateVenuePage/>}/>

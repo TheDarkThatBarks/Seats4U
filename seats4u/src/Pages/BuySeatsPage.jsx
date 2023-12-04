@@ -22,12 +22,14 @@ export const BuySeatsPage = () => {
     
     return (
         <div>
-            <h1>{document.getElementById("data-show-name").value}</h1>
+            <h1>{document.getElementById("data-show-id").value}</h1>
             <br></br>
             Seat ID: <input id="venue-name"/>
-            <button onClick={buySeatManager}>Delete</button>
+            <button onClick={buySeatManager}>Purchase</button>
             <br></br>
             result: <input id="db-response" readOnly/>
+            <br></br>
+            Locked Until: {new Date()[Symbol.toPrimitive]('string')}
             <br></br>
             <button onClick={() => navigate(-1)}>Back</button>
             <div id="seat-list"></div>

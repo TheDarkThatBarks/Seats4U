@@ -21,5 +21,5 @@ export function buySeat(requestRedraw) {
         requestRedraw();
     }
 
-    post('/consumer/buySeat', data, handler);
+    post('/consumer/purchaseSeat', data, handler);
 }
