@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { deleteVenue } from '../controller/DeleteVenue';
+import { deleteShowVM } from '../controller/DeleteShowVM';
 
 export const VenueManagerPage = () => {
 	const [redraw, forceRedraw] = React.useState(0);
@@ -23,6 +24,8 @@ export const VenueManagerPage = () => {
             <button onClick={() => navigate('createshow')}>Create Show</button>
             <button onClick={deleteVenueManager}>Delete</button>
             result: <input id="db-response" readOnly/>
+            showID: <input id="show-ID"/>
+            <button onClick={() => deleteShowVM(requestRedraw)}>Delete Show</button>
             <button onClick={() => navigate(-1)}>Back</button>
             <div id="venue-show-list"/>
 		</div>
