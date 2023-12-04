@@ -19,8 +19,21 @@ export const Home = () => {
     };
 
     const openSeatPage = () => {
-        document.getElementById("data-show-id").value = document.getElementById("show-id").value;
-        navigate('buyseats');
+        let showID = document.getElementById("show-id").value;
+        let shows = JSON.parse(document.getElementById("data-show-list").value);
+        let found = false;
+        for (let s of shows) {
+            console.log(s);
+            console.log(s.showID);
+            if (showID == s.showID) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            document.getElementById("data-show-id").value = showID;
+            navigate('buyseats');
+        }
     };
 
     const validateVenueManager = async () => {
