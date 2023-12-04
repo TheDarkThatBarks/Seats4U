@@ -48,7 +48,7 @@ exports.handler = async (event) => {
 
         let createShow = (venueName, name, startingPrice, month, day, year, hour, minute) => {
             return new Promise((resolve, reject) => {
-                pool.query("INSERT into Shows(venueName,name,startingPrice,month,day,year,hour,minute,active,locked) VALUES(?,?,?,?,?,?,?,?,0,0,NULL,?,0);",
+                pool.query("INSERT into Shows(venueName,name,startingPrice,month,day,year,hour,minute,active,locked,lockedUntil,seatsTotal,seatsSold) VALUES(?,?,?,?,?,?,?,?,0,0,NULL,?,0);",
                     [venueName, name, startingPrice, month, day, year, hour, minute, totalSeats], (error, rows) => {
                     if (error)
                         return reject(error);
@@ -73,7 +73,7 @@ exports.handler = async (event) => {
 
         const createSeat = (showID, section, row, column) => {
             return new Promise((resolve, reject) => {
-                pool.query("INSERT into Seats(showID,section,row,column,sold) VALUES(?,?,?,?,0);",
+                pool.query("INSERT into Seats(showID,section,r,c,sold) VALUES(?,?,?,?,0);",
                     [showID, section, row, column], (error, rows) => {
                     if (error)
                         return reject(error);
@@ -86,7 +86,7 @@ exports.handler = async (event) => {
                 });
             });
         };
-
+        
         for (let r = 1; r <= venue.sideLeftRows; r++) {
             for (let c = 1; c <= venue.sideLeftColumns; c++)
                 await createSeat(showID, "sideLeft", r, c);
