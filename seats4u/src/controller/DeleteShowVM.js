@@ -15,10 +15,6 @@ export function deleteShowVM(requestRedraw) {
 
     const handler = (json) => {
         console.log(json)
-        // clear inputs
-        nameField.value = '';
-        passwordField.value = '';
-
         requestRedraw();
     }
 
