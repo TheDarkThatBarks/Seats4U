@@ -31,7 +31,7 @@ exports.handler = async (event) => {
     if (validUser) {
         let activateShow = (showID) => {
             return new Promise((resolve, reject) => {
-                pool.query("UPDATE Shows SET active=? WHERE showID=?;", [1, showID], (error, rows) => {
+                pool.query("UPDATE Shows SET active=1 WHERE showID=?;", [showID], (error, rows) => {
                     if (error)
                         return reject(error);
                     if (rows && rows.affectedRows == 1) {
