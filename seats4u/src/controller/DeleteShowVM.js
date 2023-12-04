@@ -15,6 +15,7 @@ export function deleteShowVM(requestRedraw) {
 
     const handler = (json) => {
         console.log(json)
+        showIDField.value = "";
         requestRedraw();
     }
 
