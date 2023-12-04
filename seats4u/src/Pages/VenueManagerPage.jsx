@@ -25,12 +25,17 @@ export const VenueManagerPage = () => {
 
 	return (
 		<div className="Venue Manager">
-            <button onClick={() => navigate('createshow')}>Create Show</button>
-            <button onClick={deleteVenueManager}>Delete</button>
-            result: <input id="db-response" readOnly/>
+            <h1>Venue: {document.getElementById("data-venue-name").value}</h1>
+            <button onClick={() => navigate('createshow')}>Create A Show</button>
+            <br></br>
+            <button onClick={deleteVenueManager}>Delete This Venue</button>
+            <br></br>
             showID: <input id="show-ID"/>
             <button onClick={() => activateShow(requestRedraw)}>Activate Show</button>
             <button onClick={() => deleteShowVM(requestRedraw)}>Delete Show</button>
+            <br></br>
+            result: <input id="db-response" readOnly/>
+            <br></br>
             <button onClick={() => navigate(-1)}>Back</button>
             <div id="venue-show-list"/>
 		</div>
