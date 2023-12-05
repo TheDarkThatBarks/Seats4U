@@ -1,14 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { buySeat } from '../controller/BuySeat';
-//import { listSeats } from '../controller/ListSeats';
+import { listSeats } from '../controller/ListSeats';
 import { unlockShow } from '../controller/UnlockShow';
 
 export const BuySeatsPage = () => {
     const [redraw, forceRedraw] = React.useState(0);
 
     React.useEffect(()=>{
-        //listSeats(document.getElementById("data-show-id").value);
+        listSeats();
         const interval = setInterval(() => {
             validateStillLocked();
             document.getElementById('date-display').innerHTML = getTimeLeft();
@@ -65,7 +65,7 @@ export const BuySeatsPage = () => {
             Time Left: <label id='date-display'>{getTimeLeft()}</label>
             <br></br>
             <button onClick={backHandler}>Back</button>
-            <div id="seat-list"></div>
+            <div id="seats-list"></div>
         </div>
     );
 }
