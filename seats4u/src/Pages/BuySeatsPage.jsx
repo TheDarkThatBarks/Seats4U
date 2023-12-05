@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { buySeat } from '../controller/BuySeat';
 //import { listSeats } from '../controller/ListSeats';
+import { unlockShow } from '../controller/UnlockShow';
 
 export const BuySeatsPage = () => {
     const [redraw, forceRedraw] = React.useState(0);
@@ -19,6 +20,11 @@ export const BuySeatsPage = () => {
     const buySeatManager = () => {
         buySeat(requestRedraw);
     };
+
+    const backHandler = () => {
+        unlockShow();
+        navigate(-1);
+    }
     
     return (
         <div>
@@ -31,7 +37,7 @@ export const BuySeatsPage = () => {
             <br></br>
             Locked Until: {new Date()[Symbol.toPrimitive]('string')}
             <br></br>
-            <button onClick={() => navigate(-1)}>Back</button>
+            <button onClick={backHandler}>Back</button>
             <div id="seat-list"></div>
         </div>
     );

@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { listShows } from '../controller/ListShows';
 import { post } from '../controller/API';
+import { lockShow } from '../controller/LockShow';
 
 export const Home = () => {
     const [redraw, forceRedraw] = React.useState(0);
@@ -25,13 +26,13 @@ export const Home = () => {
         for (let s of shows) {
             console.log(s);
             console.log(s.showID);
-            if (showID == s.showID) {
-                found = true;
+            found = showID == s.showID && s.locked == 0;
+            if (found)
                 break;
-            }
         }
         if (found) {
             document.getElementById("data-show-id").value = showID;
+            lockShow();
             navigate('buyseats');
         }
     };
