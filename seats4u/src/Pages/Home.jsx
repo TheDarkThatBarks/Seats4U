@@ -18,6 +18,24 @@ export const Home = () => {
         listShows(document.getElementById("search").value);
     };
 
+    const openSeatPage = () => {
+        let showID = document.getElementById("show-id").value;
+        let shows = JSON.parse(document.getElementById("data-show-list").value);
+        let found = false;
+        for (let s of shows) {
+            console.log(s);
+            console.log(s.showID);
+            if (showID == s.showID) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            document.getElementById("data-show-id").value = showID;
+            navigate('buyseats');
+        }
+    };
+
     const validateVenueManager = async () => {
         let venueName = document.getElementById("venue-name");
         let venuePassword = document.getElementById("venue-password");
@@ -62,12 +80,18 @@ export const Home = () => {
 
     return (
         <div className="Home">
-            <button onClick={() => navigate('createvenue')}>Create Venue</button>
+            <button onClick={() => navigate('createvenue')}>Create A New Venue</button>
+            <br></br>
             Venue Name: <input id="venue-name"/>
             Venue Password: <input id="venue-password"/>
             <button onClick={validateVenueManager}>Venue Manager Page</button>
+            <br></br>
             Admin Password: <input id="admin-password"/>
             <button onClick={validateAdmin}>Admin Page</button>
+            <br></br>
+            Show ID: <input id="show-id"/>
+            <button onClick={openSeatPage}>Buy Seats</button>
+            <br></br>
             Search: <input id="search"/>
             <button onClick={search}>Search</button>
             <div id="show-list"></div>

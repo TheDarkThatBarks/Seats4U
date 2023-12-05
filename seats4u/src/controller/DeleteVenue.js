@@ -16,11 +16,12 @@ export function deleteVenue(requestRedraw) {
         // clear inputs
         nameField.value = '';
         passwordField.value = '';
+        document.getElementById("data-venue-id").value = '';
 
         if(json.statusCode === 200) {
-            document.getElementById("db-response").value = "SUCCESS!";
+            //document.getElementById("db-response").value = "SUCCESS!";
         } else {
-            document.getElementById("db-response").value = "Failure...";
+            //document.getElementById("db-response").value = "Failure...";
         }
         requestRedraw();
     }
