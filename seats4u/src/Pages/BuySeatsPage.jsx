@@ -9,6 +9,11 @@ export const BuySeatsPage = () => {
 
     React.useEffect(()=>{
         //listSeats(document.getElementById("data-show-id").value);
+        const interval = setInterval(() => {
+            validateStillLocked();
+            document.getElementById('date-display').innerHTML = getTimeLeft();
+        }, 1000);
+        return () => clearInterval(interval);
     }, [redraw]);
 
     const navigate = useNavigate();
@@ -25,17 +30,39 @@ export const BuySeatsPage = () => {
         unlockShow();
         navigate(-1);
     }
+    const validateStillLocked = () => {
+        if(date.getTime() <= Date.now()) {
+            backHandler();
+        }
+    };
+
+    const getTimeLeft = () => {
+        var timeLeft = date.getTime() - Date.now();
+        let seconds = Math.floor((timeLeft / 1000) % 60);
+        let minutes = Math.floor(timeLeft / (1000 * 60));
+        let str = '';
+        str += minutes + ":";
+        if(seconds > 0)
+            str += seconds;
+        else
+            str += "00"
+        return str;
+    };
+
+    var date = new Date(+Date.now() + 300000);
+    const showID = document.getElementById('data-show-id').value;
+    const thisShow = JSON.parse(document.getElementById("data-show-list").value).find(x => x.showID == showID);
     
     return (
         <div>
-            <h1>{document.getElementById("data-show-id").value}</h1>
+            <h1>{thisShow.name}</h1>
             <br></br>
             Seat ID: <input id="venue-name"/>
             <button onClick={buySeatManager}>Purchase</button>
             <br></br>
             result: <input id="db-response" readOnly/>
             <br></br>
-            Locked Until: {new Date()[Symbol.toPrimitive]('string')}
+            Time Left: <label id='date-display'>{getTimeLeft()}</label>
             <br></br>
             <button onClick={backHandler}>Back</button>
             <div id="seat-list"></div>
