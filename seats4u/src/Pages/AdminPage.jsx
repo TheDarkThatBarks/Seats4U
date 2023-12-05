@@ -3,6 +3,7 @@ import React from 'react';
 import { listVenues } from '../controller/ListVenues';
 import { deleteVenue } from '../controller/DeleteVenue';
 import { deleteShowAdmin } from '../controller/DeleteShowAdmin';
+import { listShowsAdmin } from '../controller/ListShowsAdmin';
 
 export const AdminPage = () => {
     const [redraw, forceRedraw] = React.useState(0);
@@ -34,8 +35,12 @@ export const AdminPage = () => {
             showID: <input id="show-ID"/>
             <button onClick={() => deleteShowAdmin(requestRedraw)}>Delete Show</button>
             <br></br>
+            <button onClick={() => listShowsAdmin("")}>Generate Show Report</button>
+            <br></br>
             <button onClick={() => navigate(-1)}>Back</button>
             <div id="venue-list"></div>
+            <br></br>
+            <div id="show-list"></div>
         </div>
     );
 }
