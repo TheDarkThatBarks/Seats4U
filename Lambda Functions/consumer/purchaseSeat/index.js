@@ -11,6 +11,20 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
+    const updateShow = (showID) => {
+        return new Promise((resolve, reject) => {
+            pool.query("UPDATE Shows SET seatsSold=seatsSold+1 WHERE showID=?;", [showID], (error, rows) => {
+                if (error)
+                    return reject(error);
+                if (rows && rows.affectedRows == 1) {
+                    return resolve(true);
+                } else {
+                    return resolve(false);
+                }
+            })
+        })
+    }
+
     const purchaseSeat = (seatID) => {
         return new Promise((resolve, reject) => {
             pool.query("UPDATE Seats SET sold=1 WHERE seatID=?;", [seatID], (error, rows) => {
@@ -25,10 +39,11 @@ exports.handler = async (event) => {
         });
     };
 
-    let purchased = await purchaseSeat(event.showID);
+    const updated = await updateShow(event.showID);
+    const purchased = await purchaseSeat(event.seatID);
     const response = {
-        statusCode: (purchased ? 200 : 400),
-        success: purchased
+        statusCode: (updated && purchased ? 200 : 400),
+        success: updated && purchased
     };
 
     return response;
