@@ -3,7 +3,7 @@ import { post } from "./API"
 export function listShowsAdmin() {
     // this sends the ACTUAL POST and retrieves the answer.
     let venueNameField = document.getElementById("venue-name-list");
-    let passwordField = document.getElementById("data-venue-password");
+    let passwordField = document.getElementById("data-admin-password");
 
     let data = {'venueName': venueNameField.value,
                 'adminPassword': passwordField.value};
