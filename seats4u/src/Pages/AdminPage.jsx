@@ -26,6 +26,7 @@ export const AdminPage = () => {
     
     return (
         <div>
+            <button onClick={() => navigate(-1)}>Back to Home</button>
             <h1>Delete a Venue</h1>
             Venue Name: <input id="venue-name-delete"/>
             Venue Password: <input id="venue-password"/>
@@ -39,7 +40,6 @@ export const AdminPage = () => {
             Venue Name: <input id="venue-name-list"/>
             <button onClick={listShowsAdmin}>Generate Show Report</button>
             <br></br>
-            <button onClick={() => navigate(-1)}>Back to Home</button>
             <h1>List of Venues</h1>
             <div id="venue-list"></div>
             <h1>Show Report</h1>
