@@ -8,9 +8,7 @@ import { activateShow } from '../controller/ActivateShow';
 export const VenueManagerPage = () => {
 	const [redraw, forceRedraw] = React.useState(0);
 
-    React.useEffect(() => {
-        listShowsByVenue()
-    }, [redraw]);
+    React.useEffect(() => {}, [redraw]);
 
     const requestRedraw = () => {
         forceRedraw(redraw + 1);
@@ -37,6 +35,7 @@ export const VenueManagerPage = () => {
             result: <input id="db-response" readOnly/>
             <br></br>
             <button onClick={() => navigate(-1)}>Back</button>
+            <button onClick={listShowsByVenue}>Generate Shows Report</button>
             <div id="venue-show-list"/>
 		</div>
 	);

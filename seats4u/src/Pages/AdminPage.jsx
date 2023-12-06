@@ -19,7 +19,7 @@ export const AdminPage = () => {
     };
 
     const deleteVenueManager = () => {
-        document.getElementById("data-venue-name").value = document.getElementById("venue-name").value;
+        document.getElementById("data-venue-name").value = document.getElementById("venue-name-delete").value;
         document.getElementById("data-venue-password").value = document.getElementById("venue-password").value;
         deleteVenue(requestRedraw);
     };
@@ -27,7 +27,7 @@ export const AdminPage = () => {
     return (
         <div>
             <br></br>
-            Venue Name: <input id="venue-name"/>
+            Venue Name: <input id="venue-name-delete"/>
             Venue Password: <input id="venue-password"/>
             <button onClick={deleteVenueManager}>Delete</button>
             <br></br>
@@ -35,7 +35,8 @@ export const AdminPage = () => {
             showID: <input id="show-ID"/>
             <button onClick={() => deleteShowAdmin(requestRedraw)}>Delete Show</button>
             <br></br>
-            <button onClick={() => listShowsAdmin("")}>Generate Show Report</button>
+            Venue Name: <input id="venue-name-list"/>
+            <button onClick={listShowsAdmin}>Generate Show Report</button>
             <br></br>
             <button onClick={() => navigate(-1)}>Back</button>
             <div id="venue-list"></div>
