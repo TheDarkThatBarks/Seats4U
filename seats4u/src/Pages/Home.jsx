@@ -7,8 +7,13 @@ import { lockShow } from '../controller/LockShow';
 export const Home = () => {
     const [redraw, forceRedraw] = React.useState(0);
 
-	React.useEffect(()=>{
-		listShows("")
+	React.useEffect(() => {
+        /*const interval = setInterval(() => {
+            listShows("");
+        }, 1000);*/
+        setTimeout(function() {
+            listShows("");
+        }, 500);
 	}, [redraw]);
 
 	const requestRedraw = () => {
@@ -16,7 +21,8 @@ export const Home = () => {
 	}
 	
     const search = () => {
-        listShows(document.getElementById("search").value);
+        document.getElementById("data-search").value = document.getElementById("search").value;
+        listShows();
     };
 
     const openSeatPage = () => {
@@ -81,6 +87,7 @@ export const Home = () => {
 
     return (
         <div className="Home">
+            <input hidden readOnly id="data-search"/>
             <button onClick={() => navigate('createvenue')}>Create A New Venue</button>
             <br></br>
             Venue Name: <input id="venue-name"/>

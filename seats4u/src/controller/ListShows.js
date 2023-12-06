@@ -1,9 +1,10 @@
 import { get } from "./API"
 
-export function listShows(searchStr) {
+export function listShows() {
     // this sends the ACTUAL POST and retrieves the answer.
     get('/consumer/listShows')
         .then(function (response) {
+            const searchStr = document.getElementById("data-search").value;
             if (searchStr !== "")
                 response.shows = response.shows.filter((show) => {return show.name.toLowerCase().includes(searchStr.toLowerCase())});
             

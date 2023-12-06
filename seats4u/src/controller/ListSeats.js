@@ -9,9 +9,10 @@ export function listSeats() {
 
     const handler = (json) => {
         console.log(json);
+        document.getElementById("data-seats-list").value = JSON.stringify(json.seats);
         let str = "";
         for (let s of json.seats)
-            str += "Seat ID: " + s.seatID + " | Row: " + s.r + " | Column: " + s.c + '<br>';
+            str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | Row: " + s.r + " | Column: " + s.c + '<br>';
 
         document.getElementById("seats-list").innerHTML = str;
     }

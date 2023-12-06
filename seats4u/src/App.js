@@ -16,12 +16,12 @@ function App() {
     //let v = new Venue("test", 123, "password1");
     return (
         <div className="Seats4U">
-            <input readOnly id="data-venue-name" value=""/>
-            <input readOnly id="data-venue-id" value=""/>
-            <input readOnly id="data-venue-password" value=""/>
-            <input readOnly id="data-admin-password" value=""/>
-            <input readOnly id="data-show-id" value=""/>
-            <input readOnly id="data-show-list" value=""/>
+            <input hidden readOnly id="data-venue-name" value=""/>
+            <input hidden readOnly id="data-venue-id" value=""/>
+            <input hidden readOnly id="data-venue-password" value=""/>
+            <input hidden readOnly id="data-admin-password" value=""/>
+            <input hidden readOnly id="data-show-id" value=""/>
+            <input hidden readOnly id="data-show-list" value=""/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/createvenue" element={<CreateVenuePage/>}/>

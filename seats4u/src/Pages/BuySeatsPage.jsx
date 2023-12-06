@@ -23,7 +23,16 @@ export const BuySeatsPage = () => {
     };
 
     const buySeatManager = () => {
-        buySeat(requestRedraw);
+        const seats = JSON.parse(document.getElementById("data-seats-list").value);
+        const seatID = document.getElementById("seat-id").value;
+        let found = false;
+        for (let s of seats) {
+            found = seatID == s.seatID;
+            if (found)
+                break;
+        }
+        if (found)
+            buySeat(requestRedraw);
     };
 
     const backHandler = () => {
@@ -55,6 +64,7 @@ export const BuySeatsPage = () => {
     
     return (
         <div>
+            <input hidden readOnly id="data-seats-list"/>
             <h1>{thisShow.name}</h1>
             <br></br>
             Seat ID: <input id="seat-id"/>
