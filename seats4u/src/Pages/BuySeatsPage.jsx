@@ -57,7 +57,7 @@ export const BuySeatsPage = () => {
         <div>
             <h1>{thisShow.name}</h1>
             <br></br>
-            Seat ID: <input id="venue-name"/>
+            Seat ID: <input id="seat-id"/>
             <button onClick={buySeatManager}>Purchase</button>
             <br></br>
             result: <input id="db-response" readOnly/>
