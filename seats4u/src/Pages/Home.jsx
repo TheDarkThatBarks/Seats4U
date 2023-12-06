@@ -88,18 +88,19 @@ export const Home = () => {
     return (
         <div className="Home">
             <input hidden readOnly id="data-search"/>
+            <h1>Venue Manager Login</h1>
             <button onClick={() => navigate('createvenue')}>Create A New Venue</button>
             <br></br>
             Venue Name: <input id="venue-name"/>
             Venue Password: <input id="venue-password"/>
             <button onClick={validateVenueManager}>Venue Manager Page</button>
-            <br></br>
+            <h1>Admin Login</h1>
             Admin Password: <input id="admin-password"/>
             <button onClick={validateAdmin}>Admin Page</button>
-            <br></br>
+            <h1>Consumer Actions</h1>
             Show ID: <input id="show-id"/>
             <button onClick={openSeatPage}>Buy Seats</button>
-            <br></br>
+            <h1>Show List</h1>
             Search: <input id="search"/>
             <button onClick={search}>Search</button>
             <div id="show-list"></div>

@@ -26,21 +26,23 @@ export const AdminPage = () => {
     
     return (
         <div>
-            <br></br>
+            <h1>Delete a Venue</h1>
             Venue Name: <input id="venue-name-delete"/>
             Venue Password: <input id="venue-password"/>
             <button onClick={deleteVenueManager}>Delete</button>
-            <br></br>
-            result: <input id="db-response" readOnly/>
+            <h1>Delete a Show</h1>
             showID: <input id="show-ID"/>
             <button onClick={() => deleteShowAdmin(requestRedraw)}>Delete Show</button>
-            <br></br>
+            <h1>Server Response</h1>
+            result: <input id="db-response" readOnly/>
+            <h1>Other Actions</h1>
             Venue Name: <input id="venue-name-list"/>
             <button onClick={listShowsAdmin}>Generate Show Report</button>
             <br></br>
-            <button onClick={() => navigate(-1)}>Back</button>
+            <button onClick={() => navigate(-1)}>Back to Home</button>
+            <h1>List of Venues</h1>
             <div id="venue-list"></div>
-            <br></br>
+            <h1>Show Report</h1>
             <div id="show-list"></div>
         </div>
     );
