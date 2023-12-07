@@ -40,7 +40,7 @@ export const BuySeatsPage = () => {
         str += minutes + ":";
         if(seconds > 0) {
             if(seconds < 10)
-                str += seconds + "0";
+                str += "0" + seconds;
             else
                 str += seconds;
         } else {
