@@ -29,14 +29,15 @@ export const Home = () => {
         let showID = document.getElementById("show-id").value;
         let shows = JSON.parse(document.getElementById("data-show-list").value);
         let found = false;
-        for (let s of shows) {
+        /*for (let s of shows) {
             console.log(s);
             console.log(s.showID);
             found = showID == s.showID && s.locked == 0;
             if (found)
                 break;
-        }
-        if (found) {
+        }*/
+        let show  = shows.find(s => s.showID == showID && s.locked == 0);
+        if (show != undefined) {
             document.getElementById("data-show-id").value = showID;
             lockShow();
             navigate('buyseats');
