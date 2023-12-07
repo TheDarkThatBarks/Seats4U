@@ -29,6 +29,7 @@ export const AdminPage = () => {
             <button onClick={() => navigate(-1)}>Back to Home</button>
             <h1>Delete a Venue</h1>
             Venue Name: <input id="venue-name-delete"/>
+            <br/>
             Venue Password: <input id="venue-password"/>
             <button onClick={deleteVenueManager}>Delete</button>
             <h1>Delete a Show</h1>
