@@ -13,9 +13,9 @@ exports.handler = async (event) => {
 
     let response = undefined;
 
-    let lockShow = (showID) => {
+    let lockShow = (showID, lockedUntil) => {
         return new Promise((resolve, reject) => {
-            pool.query("UPDATE Shows SET locked=1 WHERE showID=?;", [showID], (error, rows) => {
+            pool.query("UPDATE Shows SET locked=1, lockedUntil=? WHERE showID=?;", [lockedUntil, showID], (error, rows) => {
                 if (error)
                     return reject(error);
                 if (rows && rows.affectedRows == 1) {
