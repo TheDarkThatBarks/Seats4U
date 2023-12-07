@@ -13,7 +13,7 @@ export const Home = () => {
         }, 1000);*/
         setTimeout(function() {
             listShows("");
-        }, 500);
+        }, 1000);
 	}, [redraw]);
 
 	const requestRedraw = () => {
@@ -29,14 +29,15 @@ export const Home = () => {
         let showID = document.getElementById("show-id").value;
         let shows = JSON.parse(document.getElementById("data-show-list").value);
         let found = false;
-        for (let s of shows) {
+        /*for (let s of shows) {
             console.log(s);
             console.log(s.showID);
             found = showID == s.showID && s.locked == 0;
             if (found)
                 break;
-        }
-        if (found) {
+        }*/
+        let show  = shows.find(s => s.showID == showID && s.locked == 0);
+        if (show != undefined) {
             document.getElementById("data-show-id").value = showID;
             document.getElementById("data-date").value = Date.now() + 300000;
             lockShow();
@@ -91,17 +92,18 @@ export const Home = () => {
             <input hidden readOnly id="data-search"/>
             <h1>Venue Manager Login</h1>
             <button onClick={() => navigate('createvenue')}>Create A New Venue</button>
-            <br></br>
+            <br/>
             Venue Name: <input id="venue-name"/>
+            <br/>
             Venue Password: <input id="venue-password"/>
             <button onClick={validateVenueManager}>Venue Manager Page</button>
             <h1>Admin Login</h1>
             Admin Password: <input id="admin-password"/>
             <button onClick={validateAdmin}>Admin Page</button>
-            <h1>Consumer Actions</h1>
+            <h1>Show List</h1>
             Show ID: <input id="show-id"/>
             <button onClick={openSeatPage}>Buy Seats</button>
-            <h1>Show List</h1>
+            <br/>
             Search: <input id="search"/>
             <button onClick={search}>Search</button>
             <div id="show-list"></div>
