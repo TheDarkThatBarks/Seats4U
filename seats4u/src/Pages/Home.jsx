@@ -38,6 +38,7 @@ export const Home = () => {
         }
         if (found) {
             document.getElementById("data-show-id").value = showID;
+            document.getElementById("data-date").value = Date.now() + 300000;
             lockShow();
             navigate('buyseats');
         }

@@ -22,6 +22,37 @@ export const BuySeatsPage = () => {
         forceRedraw(redraw + 1);
     };
 
+    const backHandler = () => {
+        unlockShow();
+        navigate(-1);
+    }
+    const validateStillLocked = () => {
+        if(date <= Date.now()) {
+            backHandler();
+        }
+    };
+
+    const getTimeLeft = () => {
+        var timeLeft = date - Date.now();
+        let seconds = Math.floor((timeLeft / 1000) % 60);
+        let minutes = Math.floor(timeLeft / (1000 * 60));
+        let str = '';
+        str += minutes + ":";
+        if(seconds > 0) {
+            if(seconds < 10)
+                str += seconds + "0";
+            else
+                str += seconds;
+        } else {
+            str += "00"
+        }
+        return str;
+    };
+
+    var date = document.getElementById('data-date').value;
+    const showID = document.getElementById('data-show-id').value;
+    const thisShow = JSON.parse(document.getElementById("data-show-list").value).find(x => x.showID == showID);
+
     const buySeatManager = () => {
         const seats = JSON.parse(document.getElementById("data-seats-list").value);
         const seatID = document.getElementById("seat-id").value;
@@ -34,33 +65,6 @@ export const BuySeatsPage = () => {
         if (found)
             buySeat(requestRedraw);
     };
-
-    const backHandler = () => {
-        unlockShow();
-        navigate(-1);
-    }
-    const validateStillLocked = () => {
-        if(date.getTime() <= Date.now()) {
-            backHandler();
-        }
-    };
-
-    const getTimeLeft = () => {
-        var timeLeft = date.getTime() - Date.now();
-        let seconds = Math.floor((timeLeft / 1000) % 60);
-        let minutes = Math.floor(timeLeft / (1000 * 60));
-        let str = '';
-        str += minutes + ":";
-        if(seconds > 0)
-            str += seconds;
-        else
-            str += "00"
-        return str;
-    };
-
-    var date = new Date(+Date.now() + 300000);
-    const showID = document.getElementById('data-show-id').value;
-    const thisShow = JSON.parse(document.getElementById("data-show-list").value).find(x => x.showID == showID);
     
     return (
         <div>

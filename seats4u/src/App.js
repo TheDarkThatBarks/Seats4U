@@ -22,6 +22,7 @@ function App() {
             <input hidden readOnly id="data-admin-password" value=""/>
             <input hidden readOnly id="data-show-id" value=""/>
             <input hidden readOnly id="data-show-list" value=""/>
+            <input hidden readOnly id="data-date" value=""/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/createvenue" element={<CreateVenuePage/>}/>

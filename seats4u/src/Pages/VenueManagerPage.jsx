@@ -29,14 +29,15 @@ export const VenueManagerPage = () => {
             <button onClick={() => navigate('createshow')}>Create A Show</button>
             <br></br>
             <button onClick={deleteVenueManager}>Delete This Venue</button>
-            <br></br>
+            <h1>Show Actions</h1>
             showID: <input id="show-ID"/>
             <button onClick={() => activateShow(requestRedraw)}>Activate Show</button>
             <button onClick={() => deleteShowVM(requestRedraw)}>Delete Show</button>
-            <br></br>
+            <h1>Server Response</h1>
             result: <input id="db-response" readOnly/>
             <br></br>
             <button onClick={() => navigate(-1)}>Back</button>
+            <h1>Show List</h1>
             <div id="venue-show-list"/>
 		</div>
 	);
