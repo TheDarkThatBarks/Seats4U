@@ -12,7 +12,8 @@ export function listSeats() {
         document.getElementById("data-seats-list").value = JSON.stringify(json.seats);
         let str = "";
         for (let s of json.seats)
-            str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | Row: " + s.r + " | Column: " + s.c + '<br>';
+            //str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | Row: " + s.r + " | Column: " + s.c + '<br>';
+            str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | " + String.fromCharCode(s.r + 64) + s.c + '<br>';
 
         document.getElementById("seats-list").innerHTML = str;
     }

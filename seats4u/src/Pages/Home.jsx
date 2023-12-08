@@ -13,7 +13,7 @@ export const Home = () => {
         }, 1000);*/
         setTimeout(function() {
             listShows("");
-        }, 1000);
+        }, 1250);
 	}, [redraw]);
 
 	const requestRedraw = () => {
