@@ -15,3 +15,16 @@ export function unlockShow() {
 
     post('/consumer/unlockShow', data, handler);
 }
+
+export function unlockShow2(showID) {
+    // prepare payload for the post
+    let data = {'showID': showID};
+    
+    console.log(data);
+
+    const handler = (json) => {
+        console.log(json);
+    }
+
+    post('/consumer/unlockShow', data, handler);
+}

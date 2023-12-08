@@ -28,7 +28,7 @@ export const Home = () => {
     const openSeatPage = () => {
         let showID = document.getElementById("show-id").value;
         let shows = JSON.parse(document.getElementById("data-show-list").value);
-        let found = false;
+        //let found = false;
         /*for (let s of shows) {
             console.log(s);
             console.log(s.showID);
