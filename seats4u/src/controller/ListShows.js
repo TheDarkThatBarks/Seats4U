@@ -23,7 +23,7 @@ export function listShows() {
             for (let s of response.shows) {
                 let lockedUntilDate = new Date(s.lockedUntil);
                 let lockedUntilString = lockedUntilDate[Symbol.toPrimitive]('string');
-                str += "Show ID: " + s.showID + " | Show: " + s.name + " | Venue Name: " + s.venueName + " | " + s.month + "/" + s.day + "/" + s.year + " | " + (Math.floor(s.hour / 10) === 0 ? "0" : "") + s.hour + ":" + (Math.floor(s.minute / 10) === 0 ? "0" : "") + s.minute + " | Locked: " + (s.locked == 0 ? "False" : lockedUntilString) + " | Seats Available: " + (s.seatsTotal - s.seatsSold) + '<br>';
+                str += "Show ID: " + s.showID + " | Show: " + s.name + " | Venue Name: " + s.venueName + " | " + s.month + "/" + s.day + "/" + s.year + " | " + (Math.floor(s.hour / 10) === 0 ? "0" : "") + s.hour + ":" + (Math.floor(s.minute / 10) === 0 ? "0" : "") + s.minute + " | Locked: " + (s.locked == 0 ? "False" : lockedUntilString) + " | Seats Available: " + (s.seatsTotal == s.seatsSold ? "SOLD OUT" : s.seatsTotal - s.seatsSold) + '<br>';
             }
 
             // insert HTML in the <div> with 
