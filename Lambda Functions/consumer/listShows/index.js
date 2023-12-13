@@ -11,6 +11,34 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
+    let deactivateShows = () => {
+        return new Promise((resolve, reject) => {
+            pool.query("UPDATE Shows SET active=0 WHERE time<?", [Date.now()], (error, rows) => {
+                if (error)
+                    return reject(error);
+                if (rows) {
+                    return resolve(true);
+                } else {
+                    return resolve(false);
+                }
+            });
+        });
+    };
+
+    let unlockShows = () => {
+        return new Promise((resolve, reject) => {
+            pool.query("UPDATE Shows SET locked=0, lockedUntil=NULL WHERE lockedUntil<?", [Date.now()], (error, rows) => {
+                if (error)
+                    return reject(error);
+                if (rows) {
+                    return resolve(true);
+                } else {
+                    return resolve(false);
+                }
+            });
+        });
+    };
+
     let showList = () => {
         return new Promise((resolve, reject) => {
             pool.query("SELECT * FROM Shows", [], (error, rows) => {
@@ -22,11 +50,20 @@ exports.handler = async (event) => {
     };
 
     let response = undefined;
+    let deactivated = await deactivateShows();
+    let unlocked = await unlockShows();
 
-    response = {
-        statusCode: 200,
-        venues: await showList()
-    };
+    if (deactivated && unlocked) {
+        response = {
+            statusCode: 200,
+            venues: await showList()
+        };
+    } else {
+        response = {
+            statusCode: 400,
+            error: "Could not update show list"
+        };
+    }
 
     pool.end();
     return response;

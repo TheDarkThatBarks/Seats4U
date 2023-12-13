@@ -46,10 +46,10 @@ exports.handler = async (event) => {
         let venue = await getVenue(event.venueName);
         let totalSeats = (venue.sideLeftRows * venue.sideLeftColumns) + (venue.centerRows * venue.centerColumns) + (venue.sideRightRows * venue.sideRightColumns);
 
-        let createShow = (venueName, name, startingPrice, month, day, year, hour, minute) => {
+        let createShow = (venueName, name, startingPrice, month, day, year, hour, minute, time) => {
             return new Promise((resolve, reject) => {
-                pool.query("INSERT into Shows(venueName,name,startingPrice,month,day,year,hour,minute,active,locked,lockedUntil,seatsTotal,seatsSold) VALUES(?,?,?,?,?,?,?,?,0,0,NULL,?,0);",
-                    [venueName, name, startingPrice, month, day, year, hour, minute, totalSeats], (error, rows) => {
+                pool.query("INSERT into Shows(venueName,name,startingPrice,month,day,year,hour,minute,time,active,locked,lockedUntil,seatsTotal,seatsSold) VALUES(?,?,?,?,?,?,?,?,?,0,0,NULL,?,0);",
+                    [venueName, name, startingPrice, month, day, year, hour, minute, time, totalSeats], (error, rows) => {
                     if (error)
                         return reject(error);
                     if (rows && rows.affectedRows == 1) {
@@ -62,6 +62,21 @@ exports.handler = async (event) => {
             });
         };
 
+        const addPadding = (num) => {
+            if (num < 10) {
+                return '0' + num;
+            } else {
+                return num;
+            }
+        };
+
+        let str = addPadding(event.year) + '-';
+        str += addPadding(event.month) + '-';
+        str += addPadding(event.day) + 'T';
+        str += addPadding(event.hour) + ':';
+        str += addPadding(event.minute) + ':00';
+        let date = new Date(str);
+
         let showID = await createShow(event.venueName,
                                       event.showName,
                                       event.startingPrice,
@@ -69,7 +84,8 @@ exports.handler = async (event) => {
                                       event.day,
                                       event.year,
                                       event.hour,
-                                      event.minute);
+                                      event.minute,
+                                      date.getTime());
 
         const createSeat = (showID, section, row, column) => {
             return new Promise((resolve, reject) => {
@@ -110,5 +126,6 @@ exports.handler = async (event) => {
         };
     }
 
+    pool.end();
     return response;
 };
