@@ -2,6 +2,7 @@ import { get } from "./API"
 import { unlockShow2 } from '../controller/UnlockShow';
 
 export function listShows() {
+    console.log(Date.now());
     // this sends the ACTUAL POST and retrieves the answer.
     get('/consumer/listShows')
         .then(function (response) {
@@ -10,7 +11,7 @@ export function listShows() {
             if (searchStr !== "")
                 response.shows = response.shows.filter((show) => {return show.name.toLowerCase().includes(searchStr.toLowerCase())});
             
-            for (let s of response.shows) {
+            /*for (let s of response.shows) {
                 let lockedUntil = s.lockedUntil;
                 if(s.lockedUntil) {
                     if(Date.now() > lockedUntil) {
@@ -28,7 +29,7 @@ export function listShows() {
                 //console.log('Date String: ' + str)
                 if(Date.now() > expireDate.getTime())
                     console.log(expireDate.toString());
-            }
+            }*/
 
             let str = ''
             for (let s of response.shows) {
