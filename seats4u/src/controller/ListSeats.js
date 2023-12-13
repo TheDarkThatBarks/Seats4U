@@ -1,6 +1,7 @@
 import { post } from "./API.js";
 
-export function listSeats() {
+export function listSeats(sortByRow) {
+    console.log(sortByRow);
     // potentially modify the model
     let showIDField = document.getElementById("data-show-id");
 
@@ -10,6 +11,8 @@ export function listSeats() {
     const handler = (json) => {
         console.log(json);
         document.getElementById("data-seats-list").value = JSON.stringify(json.seats);
+        if (sortByRow)
+            json.seats.sort((a, b) => a.r - b.r);
         let str = "";
         for (let s of json.seats)
             //str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | Row: " + s.r + " | Column: " + s.c + '<br>';

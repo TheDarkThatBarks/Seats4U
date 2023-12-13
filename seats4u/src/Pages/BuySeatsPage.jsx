@@ -6,15 +6,16 @@ import { unlockShow } from '../controller/UnlockShow';
 
 export const BuySeatsPage = () => {
     const [redraw, forceRedraw] = React.useState(0);
+    const [sortByRow, setSort] = React.useState(false);
 
-    React.useEffect(()=>{
-        listSeats();
+    React.useEffect(() => {
+        listSeats(sortByRow);
         const interval = setInterval(() => {
             validateStillLocked();
             document.getElementById('date-display').innerHTML = getTimeLeft();
         }, 1000);
         return () => clearInterval(interval);
-    }, [redraw]);
+    }, [redraw, sortByRow]);
 
     const navigate = useNavigate();
 
@@ -79,6 +80,11 @@ export const BuySeatsPage = () => {
             Time Left: <label id='date-display'>{getTimeLeft()}</label>
             <br></br>
             <button onClick={backHandler}>Back</button>
+            <br/><br/>
+            Sort By: &nbsp;
+            <button onClick={() => setSort(false)}>Section</button>
+            <button onClick={() => setSort(true)}>Row</button>
+            <br/><br/>
             <div id="seats-list"></div>
         </div>
     );
