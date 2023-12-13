@@ -10,13 +10,24 @@ export function listShows() {
             if (searchStr !== "")
                 response.shows = response.shows.filter((show) => {return show.name.toLowerCase().includes(searchStr.toLowerCase())});
             
-            var needUpdate = false;
             for (let s of response.shows) {
                 let lockedUntil = s.lockedUntil;
-                if(Date.now() > lockedUntil) {
-                    needUpdate = true;
-                    unlockShow2(s.showID);
+                if(s.lockedUntil) {
+                    if(Date.now() > lockedUntil) {
+                        unlockShow2(s.showID);
+                    }
                 }
+
+                let str = '';
+                str += addPadding(s.year) + '-';
+                str += addPadding(s.month) + '-';
+                str += addPadding(s.day) + '-T';
+                str += addPadding(s.hour) + ':';
+                str += addPadding(s.minute) + ':00';
+                let expireDate = new Date(str);
+                //console.log('Date String: ' + str)
+                if(Date.now() > expireDate.getTime())
+                    console.log(expireDate.toString());
             }
 
             let str = ''
@@ -38,8 +49,15 @@ export function listShows() {
         })
     }
 
+    const addPadding = (num) => {
+        if(num < 10)
+            return '0' + num;
+        else
+            return num;
+    };
+
     const getTimeLeft = (date) => {
-        var timeLeft = date - Date.now();
+        let timeLeft = date - Date.now();
         let seconds = Math.floor((timeLeft / 1000) % 60);
         let minutes = Math.floor(timeLeft / (1000 * 60));
         let str = '';
