@@ -1,24 +1,25 @@
-import { get } from "./API"
+import { post } from "./API.js";
 
-export function listSeats(showID) {
-    // this sends the ACTUAL POST and retrieves the answer.
-    get('/consumer/listSeats')
-        .then(function (response) {
-            if (searchStr !== "")
-                response.seats = response.seats.filter((show) => {return show.name.toLowerCase().includes(searchStr.toLowerCase())});
-            
-            let str = ''
-            for (let s of response.shows)
-                str += "Seat: " + s.seatID + " | Venue Name: " + s.venueName + " | " + s.month + "/" + s.day + "/" + s.year + " | " + (Math.floor(s.hour / 10) === 0 ? "0" : "") + s.hour + ":" + (Math.floor(s.minute / 10) === 0 ? "0" : "") + s.minute + '<br>';
+export function listSeats(sortByRow) {
+    console.log(sortByRow);
+    // potentially modify the model
+    let showIDField = document.getElementById("data-show-id");
 
-            // insert HTML in the <div> with 
-            // constant-list
-            let cd = document.getElementById('seat-list')
-            cd.innerHTML = str
+    // prepare payload for the post
+    let data = {'showID': showIDField.value};
 
-        })
-        .catch(function (error) {
-            // not much to do
-            console.log(error)
-        })
+    const handler = (json) => {
+        console.log(json);
+        document.getElementById("data-seats-list").value = JSON.stringify(json.seats);
+        if (sortByRow)
+            json.seats.sort((a, b) => a.r - b.r);
+        let str = "";
+        for (let s of json.seats)
+            //str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | Row: " + s.r + " | Column: " + s.c + '<br>';
+            str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | " + String.fromCharCode(s.r + 64) + s.c + '<br>';
+
+        document.getElementById("seats-list").innerHTML = str;
     }
+
+    post('/consumer/listSeats', data, handler);
+}

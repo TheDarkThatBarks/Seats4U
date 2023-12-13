@@ -10,11 +10,11 @@ export const CreateShowPage = () => {
     const navigate = useNavigate();
 
     const createShowHandler = (e) => {
-        createShow(requestRedraw)
+        createShow(requestRedraw);
     }
 
     const requestRedraw = () => {
-        forceRedraw(redraw+1)
+        forceRedraw(redraw+1);
     }
 
     return (

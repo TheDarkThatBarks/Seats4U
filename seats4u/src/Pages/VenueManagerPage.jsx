@@ -8,9 +8,7 @@ import { activateShow } from '../controller/ActivateShow';
 export const VenueManagerPage = () => {
 	const [redraw, forceRedraw] = React.useState(0);
 
-    React.useEffect(() => {
-        listShowsByVenue()
-    }, [redraw]);
+    React.useEffect(() => {}, [redraw]);
 
     const requestRedraw = () => {
         forceRedraw(redraw + 1);
@@ -29,14 +27,16 @@ export const VenueManagerPage = () => {
             <button onClick={() => navigate('createshow')}>Create A Show</button>
             <br></br>
             <button onClick={deleteVenueManager}>Delete This Venue</button>
-            <br></br>
+            <h1>Show Actions</h1>
             showID: <input id="show-ID"/>
             <button onClick={() => activateShow(requestRedraw)}>Activate Show</button>
             <button onClick={() => deleteShowVM(requestRedraw)}>Delete Show</button>
-            <br></br>
+            <h1>Server Response</h1>
             result: <input id="db-response" readOnly/>
             <br></br>
             <button onClick={() => navigate(-1)}>Back</button>
+            <h1>Show List</h1>
+            <button onClick={listShowsByVenue}>Generate Shows Report</button>
             <div id="venue-show-list"/>
 		</div>
 	);
