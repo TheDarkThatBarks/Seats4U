@@ -12,7 +12,7 @@ export const Home = () => {
             listShows("");
         }, 1000);*/
         setTimeout(function() {
-            listShows("");
+            listShows("show");
         }, 1250);
 	}, [redraw]);
 
@@ -20,9 +20,14 @@ export const Home = () => {
 		forceRedraw(redraw + 1)
 	}
 	
-    const search = () => {
+    const searchByShow = () => {
         document.getElementById("data-search").value = document.getElementById("search").value;
-        listShows();
+        listShows("show");
+    };
+
+    const searchByVenue = () => {
+        document.getElementById("data-search").value = document.getElementById("search").value;
+        listShows("venue");
     };
 
     const openSeatPage = () => {
@@ -105,7 +110,8 @@ export const Home = () => {
             <button onClick={openSeatPage}>Buy Seats</button>
             <br/>
             Search: <input id="search"/>
-            <button onClick={search}>Search</button>
+            <button onClick={searchByShow}>Search by Show</button>
+            <button onClick={searchByVenue}>Search by Venue</button>
             <div id="show-list"></div>
         </div>
     );

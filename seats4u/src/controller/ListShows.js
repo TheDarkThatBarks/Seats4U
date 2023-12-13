@@ -1,15 +1,20 @@
 import { get } from "./API"
 import { unlockShow2 } from '../controller/UnlockShow';
 
-export function listShows() {
+export function listShows(searchType) {
     console.log(Date.now());
     // this sends the ACTUAL POST and retrieves the answer.
     get('/consumer/listShows')
         .then(function (response) {
             document.getElementById("data-show-list").value = JSON.stringify(response.shows);
             const searchStr = document.getElementById("data-search").value;
-            if (searchStr !== "")
-                response.shows = response.shows.filter((show) => {return show.name.toLowerCase().includes(searchStr.toLowerCase())});
+            if (searchStr !== "") {
+                if (searchType === "show") {
+                    response.shows = response.shows.filter((show) => {return show.name.toLowerCase().includes(searchStr.toLowerCase())});
+                } else if (searchType === "venue") {
+                    response.shows = response.shows.filter((show) => {return show.venueName.toLowerCase().includes(searchStr.toLowerCase())});
+                }
+            }
             
             /*for (let s of response.shows) {
                 let lockedUntil = s.lockedUntil;
