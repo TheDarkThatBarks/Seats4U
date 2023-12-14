@@ -13,7 +13,7 @@ exports.handler = async (event) => {
 
     let seatList = (showID) => {
         return new Promise((resolve, reject) => {
-            pool.query("SELECT * FROM Seats WHERE showID=?", [showID], (error, rows) => {
+            pool.query("SELECT * FROM Seats WHERE showID=? AND sold=0", [showID], (error, rows) => {
                 if (error)
                     return reject(error);
                 return resolve(rows);

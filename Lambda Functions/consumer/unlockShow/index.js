@@ -15,7 +15,7 @@ exports.handler = async (event) => {
 
     let unlockShow = (showID) => {
         return new Promise((resolve, reject) => {
-            pool.query("UPDATE Shows SET locked=0 WHERE showID=?;", [showID], (error, rows) => {
+            pool.query("UPDATE Shows SET locked=0,lockedUntil=NULL WHERE showID=?;", [showID], (error, rows) => {
                 if (error)
                     return reject(error);
                 if (rows && rows.affectedRows == 1) {
@@ -32,6 +32,7 @@ exports.handler = async (event) => {
         statusCode: (unlocked ? 200 : 400),
         success: unlocked
     };
-
+    
+    pool.end();
     return response;
 };

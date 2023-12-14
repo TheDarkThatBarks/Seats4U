@@ -85,7 +85,7 @@ exports.handler = async (event) => {
                                       event.year,
                                       event.hour,
                                       event.minute,
-                                      date.getTime());
+                                      date.getTime() + 5*60*60*1000);
 
         const createSeat = (showID, section, row, column) => {
             return new Promise((resolve, reject) => {

@@ -11,12 +11,12 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
-    let deactivateShows = () => {
+    let validate = (password) => {
         return new Promise((resolve, reject) => {
-            pool.query("UPDATE Shows SET active=0 WHERE time<?", [Date.now()], (error, rows) => {
+            pool.query("SELECT * FROM Admin WHERE password=?", [password], (error, rows) => {
                 if (error)
                     return reject(error);
-                if (rows) {
+                if (rows && rows.length == 1) {
                     return resolve(true);
                 } else {
                     return resolve(false);
@@ -25,43 +25,42 @@ exports.handler = async (event) => {
         });
     };
 
-    let unlockShows = () => {
+    let deleteShow = (showID) => {
         return new Promise((resolve, reject) => {
-            pool.query("UPDATE Shows SET locked=0, lockedUntil=NULL WHERE lockedUntil<?", [Date.now()], (error, rows) => {
+            pool.query("DELETE FROM Shows WHERE showID=?", [showID], (error, rows) => {
                 if (error)
                     return reject(error);
-                if (rows) {
+                if (rows && rows.affectedRows == 1) {
                     return resolve(true);
                 } else {
                     return resolve(false);
                 }
-            });
-        });
-    };
-
-    let showList = () => {
-        return new Promise((resolve, reject) => {
-            pool.query("SELECT * FROM Shows", [], (error, rows) => {
-                if (error)
-                    return reject(error);
-                return resolve(rows);
             });
         });
     };
 
     let response = undefined;
-    let deactivated = await deactivateShows();
-    let unlocked = await unlockShows();
+    const validUser = await validate(event.adminPassword);
 
-    if (deactivated && unlocked) {
-        response = {
-            statusCode: 200,
-            venues: await showList()
-        };
+    if (validUser) {
+        try {
+            const result = await deleteShow(event.showID);
+            response = {
+                statusCode: 200,
+                success: JSON.stringify(result)
+            }
+        } catch (err) {
+            response = {
+                statusCode: 400,
+                error: err
+            }
+        } finally {
+            pool.end();   // disconnect from database to avoid "too many connections" problem that can occur
+        }
     } else {
         response = {
             statusCode: 400,
-            error: "Could not update show list"
+            error: "Invalid Administrator credentials"
         };
     }
 

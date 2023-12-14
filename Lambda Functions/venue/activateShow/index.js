@@ -57,5 +57,6 @@ exports.handler = async (event) => {
         };
     }
 
+    pool.end();
     return response;
 };

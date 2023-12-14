@@ -11,26 +11,12 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
-    const updateShow = (showID) => {
+    let validate = (password) => {
         return new Promise((resolve, reject) => {
-            pool.query("UPDATE Shows SET seatsSold=seatsSold+1 WHERE showID=? AND active=1;", [showID], (error, rows) => {
+            pool.query("SELECT * FROM Admin WHERE password=?", [password], (error, rows) => {
                 if (error)
                     return reject(error);
-                if (rows && rows.affectedRows == 1) {
-                    return resolve(true);
-                } else {
-                    return resolve(false);
-                }
-            })
-        })
-    }
-
-    const purchaseSeat = (seatID) => {
-        return new Promise((resolve, reject) => {
-            pool.query("UPDATE Seats SET sold=1 WHERE seatID=?;", [seatID], (error, rows) => {
-                if (error)
-                    return reject(error);
-                if (rows && rows.affectedRows == 1) {
+                if (rows && rows.length == 1) {
                     return resolve(true);
                 } else {
                     return resolve(false);
@@ -39,19 +25,29 @@ exports.handler = async (event) => {
         });
     };
 
-    const updated = await updateShow(event.showID);
+    let showList = (venueName) => {
+        return new Promise((resolve, reject) => {
+            pool.query("SELECT * FROM Shows WHERE venueName=?", [venueName], (error, rows) => {
+                if (error)
+                    return reject(error);
+                return resolve(rows);
+            });
+        });
+    };
+
+    let validUser = await validate(event.adminPassword);
     let response = undefined;
-    if (updated) {
-        const purchased = await purchaseSeat(event.seatID);
+
+    if (validUser) {
         response = {
             statusCode: 200,
-            success: purchased
-        };   
+            shows: await showList(event.venueName)
+        };
     } else {
         response = {
-            statusCode: 400,
-            error: "Show is no longer active"
-        }
+            statusCode: 200,
+            error: "Invalid Administrator credentials"
+        };
     }
 
     pool.end();

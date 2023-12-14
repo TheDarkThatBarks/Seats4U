@@ -11,26 +11,26 @@ exports.handler = async (event) => {
         database: db_access.config.database
     });
 
-    const updateShow = (showID) => {
+    let deactivateShows = () => {
         return new Promise((resolve, reject) => {
-            pool.query("UPDATE Shows SET seatsSold=seatsSold+1 WHERE showID=? AND active=1;", [showID], (error, rows) => {
+            pool.query("UPDATE Shows SET active=0 WHERE time<?", [Date.now()], (error, rows) => {
                 if (error)
                     return reject(error);
-                if (rows && rows.affectedRows == 1) {
-                    return resolve(true);
+                if (rows) {
+                    return resolve(rows);
                 } else {
                     return resolve(false);
                 }
-            })
-        })
-    }
+            });
+        });
+    };
 
-    const purchaseSeat = (seatID) => {
+    let unlockShows = () => {
         return new Promise((resolve, reject) => {
-            pool.query("UPDATE Seats SET sold=1 WHERE seatID=?;", [seatID], (error, rows) => {
+            pool.query("UPDATE Shows SET locked=0, lockedUntil=NULL WHERE lockedUntil<?", [Date.now()], (error, rows) => {
                 if (error)
                     return reject(error);
-                if (rows && rows.affectedRows == 1) {
+                if (rows) {
                     return resolve(true);
                 } else {
                     return resolve(false);
@@ -39,19 +39,34 @@ exports.handler = async (event) => {
         });
     };
 
-    const updated = await updateShow(event.showID);
+    let showList = () => {
+        return new Promise((resolve, reject) => {
+            pool.query("SELECT * FROM Shows WHERE active=1", [], (error, rows) => {
+                if (error)
+                    return reject(error);
+                return resolve(rows);
+            });
+        });
+    };
+    
+    console.log(Date.now());
+
     let response = undefined;
-    if (updated) {
-        const purchased = await purchaseSeat(event.seatID);
+    let deactivated = await deactivateShows();
+    let unlocked = await unlockShows();
+    
+    console.log(deactivated);
+
+    if (deactivated && unlocked) {
         response = {
             statusCode: 200,
-            success: purchased
-        };   
+            shows: await showList()
+        };
     } else {
         response = {
             statusCode: 400,
-            error: "Show is no longer active"
-        }
+            error: "Could not update show list"
+        };
     }
 
     pool.end();

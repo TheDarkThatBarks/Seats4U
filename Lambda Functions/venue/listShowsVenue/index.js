@@ -17,7 +17,7 @@ exports.handler = async (event) => {
                 if (error)
                     return reject(error);
                 if (rows && rows.length == 1) {
-                    return resolve(true);
+                    return resolve(rows);
                 } else {
                     return resolve(false);
                 }
@@ -41,7 +41,7 @@ exports.handler = async (event) => {
     if (validUser) {
         response = {
             statusCode: 200,
-            venues: await showList(event.venueName)
+            shows: await showList(event.venueName)
         };
     } else {
         response = {
