@@ -8,12 +8,13 @@ export const Home = () => {
     const [redraw, forceRedraw] = React.useState(0);
 
 	React.useEffect(() => {
-        /*const interval = setInterval(() => {
-            listShows("");
-        }, 1000);*/
-        setTimeout(function() {
+        const interval = setInterval(() => {
             listShows("show");
-        }, 1250);
+        }, 500);
+        return () => clearInterval(interval);
+        /*setTimeout(function() {
+            listShows("show");
+        }, 1250);*/
 	}, [redraw]);
 
 	const requestRedraw = () => {
