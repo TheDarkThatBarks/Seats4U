@@ -1,0 +1,1196 @@
+commit eb3d6980bdfb16eb2b34f36e856e8a285e371f75
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 14 14:26:16 2023 -0500
+
+    Create src.zip
+
+commit 1d5c2f58805efafbd65bbd788dbc502dba064c11
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 14 14:21:40 2023 -0500
+
+    Update Home.jsx
+
+commit 713bbe2a6c24d6435c63091ee76fd9a2e17e31df
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 14 14:16:08 2023 -0500
+
+    Delete Model.js
+
+commit 527e7d32c61a5fce55dc904a06068d3000c7f16d
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 14 14:11:30 2023 -0500
+
+    Lambda functions export
+
+commit 00494d1e61df430d96ccce9659c9baa0fb762e13
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 14 14:09:07 2023 -0500
+
+    Changed folder name
+
+commit b0d308694bcc95198d85686f36431f1dfa707d4d
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 14 14:08:11 2023 -0500
+
+    Updated lambda functions
+
+commit 3fd98ddafb51bcc79c8c9612d2a2f6407572f489
+Merge: 1aebc10e 2a6f5114
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 14 13:58:30 2023 -0500
+
+    Merge branch 'CollinFrontPage'
+
+commit 2a6f5114af6d6da92c08a54034dda441b05df707
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 14 13:58:18 2023 -0500
+
+    Small final changes
+
+commit 16d86523210fd10fe515d99c044b39dd9d2a5e0a
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 13 15:46:01 2023 -0500
+
+    Search by venue
+
+commit b58961520726b775a8a5f1bdfb0e471dd69cd4bf
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 13 15:12:49 2023 -0500
+
+    Fix
+
+commit 1aebc10ea2d07fa475519b83446e294cb569142a
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 13 14:31:45 2023 -0500
+
+    Changes
+
+commit 013bf2adc093745014437b172d4a317851333ade
+Merge: 84141487 5e042ca7
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 13 13:57:05 2023 -0500
+
+    Merge branch 'CollinFrontPage'
+
+commit 5e042ca70af507edbfd7870526bb25e6c8726e55
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Wed Dec 13 13:56:33 2023 -0500
+
+    Show Updating Stuff
+
+commit 6edf2ef301b421db0e1b485a1e15bd5411b590a2
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 13 13:51:00 2023 -0500
+
+    Added seat sorting
+
+commit 49f3340849fe80fed008781a78e263e92edfb7a8
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Wed Dec 13 13:11:15 2023 -0500
+
+    Added SOLD OUT message for when a show is sold out in place of number of seats remaining (for customer view)
+
+commit bcf32d042fddefc407556a3af62ec6cef812bf0e
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Fri Dec 8 13:53:08 2023 -0500
+
+    LockedUntil stuff
+
+commit cc17398ab3fff0bf5a7a59cec3ab5facf57615e7
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 8 13:11:11 2023 -0500
+
+    Changed listSeats display
+
+commit af7e73dee11f8fee1cc4b12370f2cc1321daa033
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Thu Dec 7 14:19:00 2023 -0500
+
+    Timer fixed 2
+
+commit 7ef732d4e76bc4665d9e57c4f7ab33cf42a61d3b
+Merge: b5f79b4d 964afba7
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Thu Dec 7 14:17:05 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit b5f79b4deaf8bd5a876ba9eba92919d26d72b708
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Thu Dec 7 14:15:54 2023 -0500
+
+    Fixed timer
+
+commit 964afba783942879833452147b3cafeada9d8dbe
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 7 13:28:26 2023 -0500
+
+    Fixed listShow search
+
+commit 030134cfc2387a085fbe61a2bdc1c37da9a9e630
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 7 13:18:46 2023 -0500
+
+    Cosmetic changes
+
+commit ed6095b10ac9e659f58a87e6badf2cf8cf5625a9
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 6 14:05:26 2023 -0500
+
+    Update ListShowsAdmin.js
+
+commit f3968367a007a3584a864e92be34abde78982fb0
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 6 13:59:32 2023 -0500
+
+    Update AdminPage.jsx
+
+commit 45d79eb054e3574b5941929e17876f06637122b8
+Merge: e8c71565 f09e29e9
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 6 13:58:32 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit e8c715655546393e1a7c0a17ad4df4aa85c0ee84
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 6 13:57:23 2023 -0500
+
+    Added Venue Show Report
+
+commit f09e29e901a9d24f7a3cbf70ed9866aa2cf504a3
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Wed Dec 6 13:47:59 2023 -0500
+
+    UI update to make things more clear
+
+commit 84dd48218c1aefd2ebdc990203432f44f8d4bbf3
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 6 13:31:45 2023 -0500
+
+    Stuff
+
+commit 841414871048f57bedeb67151ab0b373b0b85f19
+Merge: 59d5d203 6b8014e2
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 6 13:04:18 2023 -0500
+
+    Merge branch 'purchaseSeat'
+
+commit 6b8014e29c5b5bfbdc9067cb9e31da53edf0abd7
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 6 13:04:07 2023 -0500
+
+    Fixed purchaseSeats
+
+commit fb2dab7f85a82b4d68449220aa0762c3362c2d66
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Dec 6 12:53:50 2023 -0500
+
+    Fix
+
+commit 3ee3663c8cb053a4bbebde5c2476b2d09248c7c3
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Dec 5 16:43:53 2023 -0500
+
+    Seat Listing
+
+commit f2cfdc36bd5fec87a252e10258afe9c5c26055a6
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Tue Dec 5 14:33:36 2023 -0500
+
+    Show Lock
+
+commit ddfc0e2b84340d68b5097404b218fff598ed6ed6
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Tue Dec 5 14:06:19 2023 -0500
+
+    listShowsAdmin is fully functional
+
+commit 59d5d203785d1755890e93ef89680db96aada159
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Dec 5 13:49:01 2023 -0500
+
+    Everything
+
+commit 2a59812764c133954f5f3aefbb259a4c57c74f04
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Dec 5 13:37:31 2023 -0500
+
+    Locking and unlocking shows
+
+commit bc53a9390388d1cadc3c81adbf97b0c244862519
+Merge: c5dc3fed 6c549ae9
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Dec 5 13:22:09 2023 -0500
+
+    Merge branch 'CollinFrontPage'
+
+commit c5dc3fed21f36b0a6c0a921d97f3515e7b1ca173
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Dec 5 13:21:29 2023 -0500
+
+    Everything
+
+commit 6c549ae9d4bfd5db0f38e3e827ea7f6758a3d682
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 16:36:40 2023 -0500
+
+    Added check for available show
+
+commit 5fd722052cd6fb8c09c8f1c9486a949fa8aa5f66
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 16:22:15 2023 -0500
+
+    Update index.js
+
+commit a387cd84cd321676dfed6bf6c7936661c243109c
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 15:56:23 2023 -0500
+
+    Added seat creation
+
+commit 668220a8811583ee396a6ab8d8ef825bd5ed2508
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Mon Dec 4 15:54:55 2023 -0500
+
+    Some UI Changes
+
+commit 3bcf91cdff972d065df7d4dc3f40fd13253bdfbc
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 15:31:57 2023 -0500
+
+    npm install
+
+commit 1717eca7a0bc51f869d19257b174c4901cd799f2
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Mon Dec 4 15:29:55 2023 -0500
+
+    Displays locked until date
+
+commit 97824ce690577d16cc8ed2cccb760e05a6f755b0
+Merge: 39ea47d6 b5396b36
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 15:06:48 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit 39ea47d617c2ee34c06cfb57983167c74bfce556
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 15:06:19 2023 -0500
+
+    Update ListShows.js
+
+commit b5396b361147e23b7a234550443e6a41a65314d5
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Mon Dec 4 14:04:17 2023 -0500
+
+    Adding seat purchasing page
+
+commit 47590699cc9d131a5a73912d6e30537b90d66836
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Mon Dec 4 13:55:36 2023 -0500
+
+    DeleteShowAdmin is functional
+
+commit fec020cbeb538ebaea543ab4e3fd0d3daf47b064
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 13:43:57 2023 -0500
+
+    Added activateShow
+
+commit 5f6e5d02e3f7e9ac1d8d6b781d30c16b3b45a807
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 13:39:01 2023 -0500
+
+    Update DeleteShowVM.js
+
+commit b041847725b83879d688958b77b5111bc9a95b7e
+Merge: fb48e319 461b3091
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 13:38:12 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit fb48e319d2c0aa19e8fc0341624e683012e143a2
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 13:37:37 2023 -0500
+
+    Finished listShowsByVenue
+
+commit 461b309198d4c36ab8a70c9ae36f15cb5e0bff7c
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Mon Dec 4 13:25:49 2023 -0500
+
+    DeleteShowVM is functional
+
+commit c6b500d8736499f614201af3b27de85d9ea1c9d6
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 13:21:22 2023 -0500
+
+    npm install
+
+commit 2144633d01e44d9c0f9a0624d53cb3c87a544d9e
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 12:57:14 2023 -0500
+
+    Create ListShowsByVenue.js
+
+commit d5818b4c95ec883a9c3eafced0cf3b096ee92809
+Merge: 93f63dd8 3a3dc2f0
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 12:52:06 2023 -0500
+
+    Merge branch 'activateShow'
+
+commit 3a3dc2f0742bd552414ae10acdee1e1dd82d7018
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Dec 4 12:51:51 2023 -0500
+
+    npm install
+
+commit 773095c456f1fb7fbe97778e13c82ed4d06a746e
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sat Dec 2 18:49:33 2023 -0500
+
+    Auto display venue list for admins
+
+commit 4579408cc897f6f92bfc5b588f7759a709ec830a
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sat Dec 2 18:36:11 2023 -0500
+
+    Removed Create Venue Button from Venue Manager Page
+
+commit 93f63dd89af185e0ca71e1ff6a746e4cba30a19e
+Merge: 3d257214 bedfeb0e
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sat Dec 2 16:59:48 2023 -0500
+
+    Merge branch 'CollinFrontPage'
+
+commit bedfeb0e559edf49aae5ef448c5b7825dc1be162
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sat Dec 2 16:59:06 2023 -0500
+
+    Added admin login
+
+commit 3d257214acaa7b7e36cc45e247cf85bb0b5cc348
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sat Dec 2 16:54:18 2023 -0500
+
+    adminLogin lambda function
+
+commit ebc81e02e0785d94224c165c92489999df1fb0fa
+Merge: 09c7143c baf94eb2
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sat Dec 2 16:43:51 2023 -0500
+
+    Merge branch 'search'
+
+commit 1f3bd980d943018a571ee2a31e4c2b9f21f9a8ac
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sat Dec 2 16:43:29 2023 -0500
+
+    Started admin login
+
+commit befb755d52f5f2d836477a9fac6060abb951dd70
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 1 15:42:13 2023 -0500
+
+    Update Home.jsx
+
+commit d9017ed038f249e0e5da633d8fd1000ac6232278
+Merge: 4bc205be baf94eb2
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 1 15:40:03 2023 -0500
+
+    Merge branch 'search' into CollinFrontPage
+
+commit baf94eb2cd437173200ce2d0b06d5acdfec451b9
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 1 15:39:48 2023 -0500
+
+    Update Home.jsx
+
+commit 4bc205be752638edd47431bfe5ac4562b909e699
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 1 15:39:12 2023 -0500
+
+    Fixes
+
+commit 13ceeeb04eead81e8f8064ce7cff26a3cee7554c
+Merge: 71264898 295054e2
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 1 15:36:45 2023 -0500
+
+    Merge branch 'model' into CollinFrontPage
+
+commit 295054e21d3ede4940ba5cb3f1d0450509e82261
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 1 15:34:47 2023 -0500
+
+    Lot of changes on this one
+
+commit 71264898724affbad7dc03b5675555f4975372c7
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Fri Dec 1 13:51:25 2023 -0500
+
+    Activate show controller draft
+
+commit aa4fe176d0f4aad3f9524bb4cffaa4377765109d
+Merge: 4f4f59ca b7b2285f
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Fri Dec 1 13:34:23 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit 4f4f59ca4adeda53eaa79b76cc66aae9d133d306
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Fri Dec 1 13:34:13 2023 -0500
+
+    Added venue deletion to admin page
+
+commit fa66a3852c1ec0992b4e3d646d8595c4d9d6cd22
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 1 12:57:34 2023 -0500
+
+    First draft
+
+commit 09c7143cb9007f388d7c2625ba3345ab2de0674f
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 1 12:51:13 2023 -0500
+
+    Moved folders
+
+commit b7b2285fcb8d7313a346629dbcf491125029bf98
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 1 10:29:13 2023 -0500
+
+    Added search functionality
+
+commit 0c07d0fc4e0cfcb83481c5add83a60be4e901685
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Nov 30 13:41:33 2023 -0500
+
+    Removing node_modules
+
+commit 83b2354d14f2bce5c72f33a535d7daa882e782e8
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Nov 30 13:30:18 2023 -0500
+
+    Changed gitignore
+
+commit e4eb772647e3150ba67dc008db092ebd38378a3f
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Nov 30 13:26:37 2023 -0500
+
+    Update .gitignore
+
+commit f246df3c4b63321c0e03fa355c4a4aa8722ff4a2
+Merge: b03a982d dedc32bd
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Nov 30 13:24:32 2023 -0500
+
+    Merge branch 'frontEnd'
+
+commit dedc32bd99383cb556cd975932c0c350618dfe64
+Merge: c1a392eb 00d0a521
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Nov 30 13:18:40 2023 -0500
+
+    Merge branch 'CollinFrontPage' into frontEnd
+
+commit b03a982d1595fff227b1b951f82850da06c23d68
+Merge: a9ec2beb 24e9ff20
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Nov 30 13:17:47 2023 -0500
+
+    Merge branch 'deleteVenue'
+
+commit a9ec2beb7ab23b3d2b5fe5a9fe7fe294d51734ff
+Merge: 6a44e157 65a4dc9a
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Nov 30 13:17:35 2023 -0500
+
+    Merge branch 'createShow'
+
+commit 00d0a5217690de1ba5723746f7d8bd2aed3c4eff
+Merge: 32d1b43a 42e607c0
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Wed Nov 29 17:42:01 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit 32d1b43a5a01c513371b04ae8950a6beb382a773
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Wed Nov 29 17:41:49 2023 -0500
+
+    Fixed build issue, also deleted some leftover code
+
+commit 42e607c0b163341d04b6634a11504ab33885ba43
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 17:40:19 2023 -0500
+
+    Create index.js
+
+commit 65a4dc9a964730897f2b8d4649a1d8c7113ab8b6
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 16:40:13 2023 -0500
+
+    Fix
+
+commit 24e9ff2020240c70ce56e2b1226a4c0eb77f4d99
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 16:19:31 2023 -0500
+
+    Fixes
+
+commit 4db9ff9d7147e785ec786cb4481c6de504a23139
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 16:07:02 2023 -0500
+
+    Fixes
+
+commit 5fecf71fd9f67e2c81478e36718cc6c00b027dd1
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Wed Nov 29 15:43:55 2023 -0500
+
+    Added Back buttons
+
+commit ec3f0b8339046cf3b0a0a7e2d3032dad7da64e4b
+Merge: fe4ebbe9 46403191
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 15:41:49 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit fe4ebbe9624b254add460e027541d9c76f4c2a01
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 15:41:14 2023 -0500
+
+    Update ListShows.js
+
+commit 4640319132b45658337c0a79595d756358283011
+Merge: cc2250e5 ce1f494a
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Wed Nov 29 15:40:11 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit cc2250e5df484dd556718c26c00f54304349f84e
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Wed Nov 29 15:38:02 2023 -0500
+
+    Added Back buttons
+
+commit ce1f494a7e562efd2ca4c92d7d48a0d577506ba0
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Wed Nov 29 15:36:12 2023 -0500
+
+    Listing Shows
+
+commit 0c6386f72009d4ce5dc9d352cdca7899af1e4a8a
+Merge: 0f1f1f96 d59e2c9e
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 15:29:44 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit 0f1f1f967c349e7aed7802682c0d4e4e46e44895
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 15:28:34 2023 -0500
+
+    Update ListVenues.js
+
+commit d59e2c9ef774bc0f3fe0835c3b5620917d684054
+Merge: b0505399 a1e16a0e
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Wed Nov 29 15:16:29 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit b050539960a85c82f43d99b2bc6ba3c8f447c71e
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Wed Nov 29 15:16:06 2023 -0500
+
+    Admin Display Improvement
+
+commit 6a44e1575e3d33276eda72c9101dda9f6fd4f3af
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 15:13:37 2023 -0500
+
+    npm install
+
+commit a1e16a0e0327b11873933d11e9d9541b5c26f44e
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Wed Nov 29 15:11:45 2023 -0500
+
+    Finished Create Show stuff for Iteration 1, as far as I'm aware.
+
+commit dde1714acb96b7cea6a698fc7ee7e0f7f6ebe74c
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Wed Nov 29 14:23:42 2023 -0500
+
+    Show related changes, create button is ALMOST fully functional.
+
+commit f9a19b77763e12044568d9d74010034fa7becad4
+Merge: 9cb8c741 8f487789
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Wed Nov 29 13:56:56 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit 9cb8c7414f7872439ae82efb2b5a7668c62fb22e
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Wed Nov 29 13:55:55 2023 -0500
+
+    More Show-related stuff
+
+commit 8f487789036bde4adde7577e5cd6251460315bb0
+Merge: b47930b5 9d11b3b4
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Wed Nov 29 13:54:47 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit b47930b5b325489df673847836d90cf7753e6c41
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Wed Nov 29 13:52:56 2023 -0500
+
+    Admin Page Work
+
+commit 9d11b3b4b7e2a76c7ffd80dfe428c78f84a04c31
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Wed Nov 29 13:43:43 2023 -0500
+
+    Made Create Show page accessible, but not yet fully functioning as desired
+
+commit abdebbdca4d4d0844562a6532f1760a8103201a7
+Merge: 2a44b32a 5bdb61cb
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 13:36:51 2023 -0500
+
+    Merge branch 'createShow'
+
+commit 2a44b32a36720861356731c2a9e3954e91f99ec7
+Merge: ae14f0ea 7433afc1
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 13:36:20 2023 -0500
+
+    Merge branch 'deleteVenue'
+
+commit 5bdb61cbffe37582e5f99b01f10b953b7a03c983
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 13:35:12 2023 -0500
+
+    Changed venueID to venueName
+
+commit 7433afc19f4573ea097cbf96973335e59a0073c2
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 29 13:22:25 2023 -0500
+
+    Changed venueID to venueName
+
+commit 31611e6cf4a74461c6e920911a2840d639121e71
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Tue Nov 28 19:43:53 2023 -0500
+
+    Added the ability to delete venues, moved some pages around
+
+commit ae14f0ea2b4a731330567fbd018ae654770cc247
+Merge: f4e0a572 4a8ea583
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 18:35:00 2023 -0500
+
+    Merge branch 'createShow'
+
+commit b87328a11b5117e6e4b87adf48de11da94769344
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Tue Nov 28 18:31:30 2023 -0500
+
+    Routing fixes and more work on create venues and home page
+
+commit 4a8ea583204e49915f8398ee45f8ebccf95ac7df
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 18:27:00 2023 -0500
+
+    npm install
+
+commit f4e0a572fd0a97bdec5237caf7357e7bf58cd098
+Merge: 9878ab29 d1721695
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 18:01:04 2023 -0500
+
+    Merge branch 'listVenues'
+
+commit 9878ab29c8b721172697f46b4f047b131158371a
+Merge: 2e333a87 c4b8cfb6
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 18:00:25 2023 -0500
+
+    Merge branch 'deleteVenue'
+
+commit d172169549650f7d525ee78d53b26a40696e929c
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 17:59:17 2023 -0500
+
+    Small changes
+
+commit c4b8cfb6ffa9a8ff9262ce77990ec5db12532c6d
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 17:35:56 2023 -0500
+
+    Small change to verification
+
+commit 4bb0c736122852a4740ad836b69f9d2f2ccf30f0
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Tue Nov 28 17:15:26 2023 -0500
+
+    I honestly have no idea.
+    
+    I guess I changed something minor, and it changed a bunch of packages. I am to scared to discard these changes.
+
+commit 5263244bc57260d5be5e56f992f7c366c63b0f03
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 16:25:50 2023 -0500
+
+    Cleaning up files
+
+commit 2e333a8736396e92c1bc72516e451b8095e6de72
+Merge: f919808a ba275209
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 16:22:22 2023 -0500
+
+    Merge branch 'deleteVenue'
+
+commit ba275209fbcda977119c2f5ab90f4b3e86dff815
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 16:21:01 2023 -0500
+
+    Update package.zip
+
+commit 61c6de7bd9426594e8e8cb6b1ace1f45832752c8
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 16:14:00 2023 -0500
+
+    Update index.js
+
+commit fb6eed461f8591576a0372551d57209bca818d02
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Tue Nov 28 15:17:01 2023 -0500
+
+    Made CreateShowPage.jsx, CreateShow.js, added things for compatibility with the new show stuff
+
+commit a5cf5e4c10a3669aafd73677e8559718e4fae299
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Tue Nov 28 14:54:32 2023 -0500
+
+    Started Show-related files
+
+commit 31550ada0ff470e41bd0cd6fbec3a292991c74ca
+Merge: 87b766b4 978c3e45
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Tue Nov 28 14:43:07 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit 978c3e45ba9dfc922e1f596f5e7c5965b5f46f16
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Tue Nov 28 14:41:57 2023 -0500
+
+    Fixing folder name 2
+
+commit 87b766b41c02141c7b1f8c7217374605bed54f8f
+Merge: 3f590df3 964d4809
+Author: Oliner, Steven Michel (786349968) <smoliner@wpi.edu>
+Date:   Tue Nov 28 14:40:54 2023 -0500
+
+    Merge branch 'CollinFrontPage' of https://github.com/Billy-Albert/CS3733 into CollinFrontPage
+
+commit e182967ee49ab7f750f3e0d62e4b03dc1c537052
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Tue Nov 28 14:40:44 2023 -0500
+
+    Trying to fix folder name 1
+
+commit 964d4809ad72b8c2d37873e7d4f6abc650781f56
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Tue Nov 28 14:10:32 2023 -0500
+
+    Fixed folder name
+
+commit 802c2aa055f76facd551c57e472a225f54dfcf3d
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Tue Nov 28 14:07:31 2023 -0500
+
+    Added routing
+
+commit 26f5bc9f02067b76db5ac6534263aefe23ee19c8
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 13:50:13 2023 -0500
+
+    Update index.js
+
+commit e19aea20e6bfaf161b2fa64cc7f464540cdbd972
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 13:41:16 2023 -0500
+
+    Update index.js
+
+commit 82dd3b2d4cd8add36ac3117588ffdebb6861a30d
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 13:32:29 2023 -0500
+
+    Create index.js
+
+commit f919808a50a456d2a8acf6c2b1feb9db742b534c
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 11:57:54 2023 -0500
+
+    npm install
+
+commit 3f590df3bb5e00944ee3d960213cbebe5bd17be5
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 11:31:16 2023 -0500
+
+    Formatting
+
+commit dee7f21418e2ecb226538c852ff0ee3874bb30f9
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 28 11:27:06 2023 -0500
+
+    Fixed createVenue integration
+
+commit 1f756f7d6e9bda5d77ed1764a0ecd597d682848d
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Mon Nov 27 20:53:22 2023 -0500
+
+    Fixed mislabeled variables
+
+commit 6c3b24eb92c86770ea4ea49da89059c37c2e2825
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Mon Nov 27 19:54:00 2023 -0500
+
+    Fixed file names and re-added db calls
+
+commit 00a9b3a3995f2f228ab12360c712a454b1ebc3a6
+Author: Collin Shields <36793080+TheMusesMagic@users.noreply.github.com>
+Date:   Mon Nov 27 19:38:24 2023 -0500
+
+    Added some input fields
+
+commit c1a392ebe0fd30d39a61e1912115016d3e1c68e3
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 17:11:29 2023 -0500
+
+    Update API.js
+
+commit 227c5ef304a1711c9de9d2496996b69f915ba75b
+Merge: 8c12ddf4 280629c1
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 16:47:43 2023 -0500
+
+    Merge branch 'deleteVenue'
+
+commit 280629c137fad7528a488f0f5a441b83c93e73dc
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 16:41:36 2023 -0500
+
+    deleteVenue
+
+commit 604ad937c1a0aec98c646aac03d17f91957ee4e0
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 16:27:30 2023 -0500
+
+    deleteVenue npm
+
+commit 8c12ddf46aeb545435d8fec73b4808b7f65d6168
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 16:10:21 2023 -0500
+
+    Fixing createVenue merge
+
+commit a3d1e900fdd058fd9540423a2f5da3e9fd5d6005
+Merge: d2134c98 cbfa2ed9
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 16:07:45 2023 -0500
+
+    Merge branch 'createVenue'
+
+commit cbfa2ed92eb42aabe788148b0f000ecd9a3c665c
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 15:52:38 2023 -0500
+
+    Update package.zip
+
+commit 8785deadc4f85b10dcf85309b448b7cc60f0acd6
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 15:51:50 2023 -0500
+
+    Fixed createVenue
+
+commit c55cc619121f0f3f6225916cb773cabdeecee9d4
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 14:33:29 2023 -0500
+
+    Update package.zip
+
+commit d0ab6ae92dd1da7208f4c15a6f0d62d872932980
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 14:33:08 2023 -0500
+
+    Update index.js
+
+commit d2134c983a591e4964f5f8e3ef8a9e0249986a81
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 14:31:12 2023 -0500
+
+    Merging createVenue into main
+
+commit 03c8ed3dd6b45b7087c1e102f97348f406d1cdfe
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 14:18:53 2023 -0500
+
+    Create package.zip
+
+commit fd8020cc0fb7fbdb086151f640d4ac43e7a2ecb1
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 14:09:48 2023 -0500
+
+    Update .gitignore
+
+commit caa1465aa6fcad8a5bf9b00234ba8f74e971d53a
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 14:09:21 2023 -0500
+
+    Update .gitignore
+
+commit 8f439251fdda9de0cd7e5ec689e5936fea648cb8
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 13:49:51 2023 -0500
+
+    Fixed gitignore
+
+commit 9007ba6553a45327b8e034ab975de0ea991e5cc7
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 13:30:24 2023 -0500
+
+    Update index.js
+
+commit 025275abb065fb39ad2fb8e0d7fc306e4096a3ed
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 13:28:56 2023 -0500
+
+    Update index.js
+
+commit d6586d1cca8ee641f5695d6a145fd8f629e89150
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 13:14:31 2023 -0500
+
+    Update index.js
+
+commit b094a41a2340c5995c055d26ef92a3325e4ee0b1
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Mon Nov 27 13:05:43 2023 -0500
+
+    Create API.js
+
+commit 4f06c650e82a593fdcc8812d03401a7f5d397821
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 12:02:34 2023 -0500
+
+    Update index.js
+
+commit 6dcb8ec5d5715ca779bfbc99f587f89a35a92da9
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:57:13 2023 -0500
+
+    Update index.js
+
+commit a908ed97820a4236becb581a8185f13a9ba3e289
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:54:41 2023 -0500
+
+    Cleaning up
+
+commit a8f17d49ff8b5604615dd9f3e457295c7a3ffe70
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:53:54 2023 -0500
+
+    Cleaning up
+
+commit 89b7f1b3a32866bacb8b855fd10f2db381ade45d
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:52:51 2023 -0500
+
+    Delete index.js
+
+commit f16b4a62bf50976dec35aa0f457e50b87a03db65
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:48:32 2023 -0500
+
+    npm install on createVenue
+
+commit f1866c9b6ba6bd5af7ea5316d10eb6f4b08e6d3b
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:43:11 2023 -0500
+
+    Moved Lambda Functions folder
+
+commit 872e5c17bb444950be72729af812394976489e93
+Merge: c368800c 34d1599a
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:42:37 2023 -0500
+
+    Merge branch 'deleteVenue'
+
+commit c368800ce4cf5d85bdf0cd5153bbf841c9ecffba
+Merge: ec3bf8b2 1673ed4d
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:42:27 2023 -0500
+
+    Merge branch 'createVenue'
+
+commit 1673ed4dd9699abe7fcf853c2a459995ec709396
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:36:26 2023 -0500
+
+    Update index.js
+
+commit 8d93adde0cf55fc09d87e11b668bcd32eb631bfb
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:35:29 2023 -0500
+
+    Update index.js
+
+commit 34d1599ab399664a91d6ff5b0f40cc3d80bb7836
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:18:40 2023 -0500
+
+    Update index.js
+
+commit b19ea0d7d2affbda6b4303b541e38698c551e54c
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:18:02 2023 -0500
+
+    Update index.js
+
+commit e09f9be4aa374bfb99e5c2efecae4a9977aeb734
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:17:36 2023 -0500
+
+    Update index.js
+
+commit f992a6e37c4307ff371f4449527aab70cf3f30e1
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:17:00 2023 -0500
+
+    Update index.js
+
+commit 482773753db2cc8b4b2d8730337bdcc49b88bd46
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:16:03 2023 -0500
+
+    Update index.js
+
+commit ec3bf8b254c7d6f1f3b069cbfb205bb7813684a5
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:12:49 2023 -0500
+
+    Delete createVenue.js
+
+commit fe99cf0d3b5b64fae86b5717ec60f9a747098e39
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:11:07 2023 -0500
+
+    Delete createVenue.js
+
+commit 2f2b80f5bdfa89cb50ae152f54d49df816d9aa86
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:10:25 2023 -0500
+
+    Create index.js
+
+commit a03c066a631750555faeca1ca513f5ad10086c6e
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 11:10:07 2023 -0500
+
+    Update index.js
+
+commit 9b12e56c93dcda43416d7eb89930b79cadeeca9b
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 10:57:13 2023 -0500
+
+    Update index.js
+
+commit 9d99304cceae12a9403ea5e28a2f090fd7ba8cc7
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 10:35:38 2023 -0500
+
+    Update index.js
+
+commit c4ffaa3503e74aad10a9029e7391ffe32ebcbc81
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 10:32:08 2023 -0500
+
+    Started createVenue function
+
+commit 8475d695d5201f50ec58780f88d1ad570127ed21
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sun Nov 26 10:24:18 2023 -0500
+
+    Create createVenue.js
+
+commit 2400af211b176331aeda79a81d3a41c6e2ff5387
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Sat Nov 25 11:31:05 2023 -0500
+
+    Initial React App
+
+commit d66675523d9b2665973f08e9ebb4af80a9f89ce8
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Tue Nov 21 14:08:04 2023 -0500
+
+    Update TicketingPlatform.mdj
+
+commit bb2d41105c8a4dddfddb19c94c1edf9a8f4ab496
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Nov 16 15:41:39 2023 -0500
+
+    Update TicketingPlatform.png
+
+commit 12128edb6075e2fe695e1a8b7bdfe80317bc598b
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Nov 16 15:35:45 2023 -0500
+
+    UML Update
+
+commit abb8656f123bc77198dee2dc71a32705136adc16
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 15 17:26:42 2023 -0500
+
+    Update TicketingPlatform.mdj
+
+commit bc92275e22706526da50f5dc994c2518da948827
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 15 13:25:49 2023 -0500
+
+    Update TicketingPlatform.mdj
+
+commit 245d249016932b47f14c240b3b420d1cd6add93f
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 8 18:52:15 2023 -0500
+
+    Update TicketingPlatform.mdj
+
+commit 3564247c7c9271bbbfccaa4554577f7a691292f8
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Wed Nov 8 18:26:24 2023 -0500
+
+    Create TicketingPlatform.mdj
+
+commit 45ad3fd3c97b84bd868e59650616a5459eb06451
+Author: Billy-Albert <47985901+Billy-Albert@users.noreply.github.com>
+Date:   Wed Nov 8 18:11:29 2023 -0500
+
+    Initial commit
