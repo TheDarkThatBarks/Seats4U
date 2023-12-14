@@ -1,6 +1,6 @@
 import { post } from "./API.js";
 
-export function listSeats(sortByRow) {
+export function listSeats(sortByRow, price) {
     console.log(sortByRow);
     // potentially modify the model
     let showIDField = document.getElementById("data-show-id");
@@ -13,10 +13,11 @@ export function listSeats(sortByRow) {
         document.getElementById("data-seats-list").value = JSON.stringify(json.seats);
         if (sortByRow)
             json.seats.sort((a, b) => a.r - b.r);
+        //const price = document.getElementById("data-show-price").value;
         let str = "";
         for (let s of json.seats)
             //str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | Row: " + s.r + " | Column: " + s.c + '<br>';
-            str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | " + String.fromCharCode(s.r + 64) + s.c + '<br>';
+            str += "Seat ID: " + s.seatID + " | Section: " + (s.section === "sideLeft" ? "Left" : (s.section === "center" ? "Center" : "Right")) + " | " + String.fromCharCode(s.r + 64) + s.c + " | Price: $" + price + '<br>';
 
         document.getElementById("seats-list").innerHTML = str;
     }

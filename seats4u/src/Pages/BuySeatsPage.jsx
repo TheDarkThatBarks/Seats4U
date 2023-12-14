@@ -9,7 +9,7 @@ export const BuySeatsPage = () => {
     const [sortByRow, setSort] = React.useState(false);
 
     React.useEffect(() => {
-        listSeats(sortByRow);
+        listSeats(sortByRow, price);
         const interval = setInterval(() => {
             validateStillLocked();
             document.getElementById('date-display').innerHTML = getTimeLeft();
@@ -53,6 +53,7 @@ export const BuySeatsPage = () => {
     var date = document.getElementById('data-date').value;
     const showID = document.getElementById('data-show-id').value;
     const thisShow = JSON.parse(document.getElementById("data-show-list").value).find(x => x.showID == showID);
+    let price = thisShow.startingPrice;
 
     const buySeatManager = () => {
         const seats = JSON.parse(document.getElementById("data-seats-list").value);
