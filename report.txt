@@ -1,3 +1,21 @@
+commit c70e8a591cc5a1496c38b21decd38668fdc011fc
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 15 13:22:05 2023 -0500
+
+    Replacing zips
+
+commit a8ee831c4990528efaa298d2f5e40dff75974423
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Fri Dec 15 13:21:06 2023 -0500
+
+    Added multi seat puchasing
+
+commit 25d84a58c9653c153cc6fc47b386265e51fb62bf
+Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
+Date:   Thu Dec 14 14:28:38 2023 -0500
+
+    Create report.txt
+
 commit eb3d6980bdfb16eb2b34f36e856e8a285e371f75
 Author: TheDarkThatBarks <125921991+TheDarkThatBarks@users.noreply.github.com>
 Date:   Thu Dec 14 14:26:16 2023 -0500
