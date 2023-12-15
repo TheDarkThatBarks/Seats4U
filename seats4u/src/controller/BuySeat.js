@@ -1,13 +1,13 @@
 import { post } from "./API.js"
 
-export function buySeat(requestRedraw) {
+export function buySeats(seatIDs, requestRedraw) {
     // potentially modify the model
     const seatIDField = document.getElementById("seat-id");
     const showIDField = document.getElementById("data-show-id");
 
     // prepare payload for the post
     let data = {'showID': showIDField.value,
-                'seatID': seatIDField.value}
+                'seatIDs': seatIDs};
     
     console.log(data);
 

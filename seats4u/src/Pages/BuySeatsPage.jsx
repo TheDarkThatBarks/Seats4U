@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import { buySeat } from '../controller/BuySeat';
+import { buySeats } from '../controller/BuySeat';
 import { listSeats } from '../controller/ListSeats';
 import { unlockShow } from '../controller/UnlockShow';
 
@@ -57,15 +57,20 @@ export const BuySeatsPage = () => {
 
     const buySeatManager = () => {
         const seats = JSON.parse(document.getElementById("data-seats-list").value);
-        const seatID = document.getElementById("seat-id").value;
-        let found = false;
-        for (let s of seats) {
-            found = seatID == s.seatID;
-            if (found)
-                break;
+        const seatIDs = document.getElementById("seat-id").value;
+        let seatsToBuy = seatIDs.split(",");
+        seatsToBuy = seatsToBuy.map((s) => parseInt(s));
+        //console.log(seats);
+        let seatsToRemove = [];
+        for (let sTB of seatsToBuy) {
+            if (seats.find((s) => s.seatID == sTB && s.sold == 0) === undefined)
+                seatsToRemove.push(sTB);
         }
-        if (found)
-            buySeat(requestRedraw);
+        //console.log("seatsToBuy: " + seatsToBuy);
+        //console.log("seatsToRemove: " + seatsToRemove);
+        seatsToBuy.filter((s) => !seatsToRemove.includes(s));
+        //console.log("seatsToBuy: " + seatsToBuy);
+        buySeats(seatsToBuy, requestRedraw);
     };
     
     return (

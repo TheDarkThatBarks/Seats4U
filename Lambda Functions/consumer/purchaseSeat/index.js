@@ -42,9 +42,11 @@ exports.handler = async (event) => {
     const updated = await updateShow(event.showID);
     let response = undefined;
     if (updated) {
-        const purchased = await purchaseSeat(event.seatID);
+        let purchased = true;
+        for (let s of event.seatIDs)
+            purchased &= await purchaseSeat(s);
         response = {
-            statusCode: 200,
+            statusCode: (purchased ? 200 : 400),
             success: purchased
         };   
     } else {
